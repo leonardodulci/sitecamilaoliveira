@@ -13,17 +13,15 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f8f8f8;
-    height: 1500px;
 }
 
 :root {
-    --color-primary: #586E26;
-    --color-secondary: black;
-    --color-background: #ebe9e6;
-    --color-text-dark: #333;
-    --color-text-light: #555;
+    --color-primary: #586E26; /* Verde da marca */
+    --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
+    --color-cta: #25D366; /* Verde do WhatsApp */
+    --color-heading: #584D42; /* Marrom para títulos */
+    --color-text-light: #555; /* Cinza para textos */
 }
 
 @font-face {
@@ -35,7 +33,6 @@ body {
 /* CABEÇALHO E NAVEGAÇÃO        */
 /* ============================ */
 
-/* Estilos para o cabeçalho no topo da página */
 .main-header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -44,30 +41,28 @@ body {
     align-items: center;
     padding: 20px 50px;
     height: 90px;
-    position: fixed; /* Deixa o cabeçalho fixo no topo da tela */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    z-index: 1000;
     transition: all 0.4s ease;
 }
 
-/* Estilos para o cabeçalho após o scroll */
 .main-header.scrolled {
     height: 50px;
     padding: 10px 50px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Container da logo */
 .logo-link {
     display: flex;
     align-items: center;
 }
 
 .logo-image-large {
-    height:  160px;
+    height: 160px;
     transition: all 0.4s ease;
 }
 
@@ -77,7 +72,6 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Mostra a logo pequena quando o cabeçalho é rolado */
 .main-header.scrolled .logo-image-large {
     display: none;
 }
@@ -86,7 +80,6 @@ body {
     display: block;
 }
 
-/* Menu de navegação */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -110,9 +103,8 @@ body {
     color: var(--color-primary);
 }
 
-/* Estilo do botão de WhatsApp */
 .whatsapp-button {
-    background-color: #25D366;
+    background-color: var(--color-cta);
     color: #fff;
     padding: 10px 20px;
     border-radius: 50px;
@@ -126,111 +118,139 @@ body {
     background-color: #128C7E;
 }
 
-/* Diminui o botão quando o cabeçalho é rolado */
 .main-header.scrolled .whatsapp-button {
     font-size: 0.9em;
     padding: 8px 15px;
 }
 
 /* ============================ */
-/* SEÇÕES DO CONTEÚDO           */
+/* SEÇÃO DE DESTAQUE (HERO)     */
 /* ============================ */
 
-/* Estilo para todas as seções */
-.section {
-    padding: 100px 50px;
+main > section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 50px 50px;
+    background-color: var(--color-background);
+    gap: 40px;
+}
+
+main > section h1, main > section p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+main > section > h1 {
+    font-family: 'dream', serif;
+    font-size: 3.5em;
+    color: var(--color-heading);
+    line-height: 1.0px;
+    letter-spacing: 1.0px;
+}
+
+main > section > p {
+    font-size: 1.2em;
+    color: var(--color-text-light);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content > h1, .hero-content > p {
+    text-align: left;
+    font-family: 'Neuton';
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Imagem da nutricionista */
+main > section > img {
+    max-width: 50%;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==================== */
+/* FORMULÁRIO           */
+/* ==================== */
+
+.q1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    max-width: 500px;
+}
+
+#whatsappForm {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+    font-family: 'Neuton';
+    
+}
+
+#whatsappForm h1 {
+    font-size: 1.5em;
+    margin-bottom: -10px;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 2.5em;
-    color: var(--color-text-dark);
-    margin-bottom: 30px;
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
 }
 
-/* Exemplo de estilo para uma seção de serviços */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.service-card {
-    background-color: #ffffff;
-    padding: 30px;
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--color-primary);
+}
+
+textarea {
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    resize: vertical;
 }
 
-/* ============================ */
-/* RESPONSIVIDADE               */
-/* ============================ */
-
-@media screen and (max-width: 992px) {
-    .main-header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 15px 25px;
-        justify-content: center;
-    }
-
-    .main-nav {
-        width: 100%;
-        margin-top: 15px;
-    }
-    
-    .main-nav ul {
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+button[type="submit"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--color-cta);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .logo-link {
-        margin-bottom: 10px;
-    }
-
-    .main-nav {
-        margin-top: 10px;
-    }
-    
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-nav ul li {
-        margin: 10px 0;
-    }
-
-    .whatsapp-button {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .main-header {
-        padding: 10px;
-    }
-
-    .logo-image-large {
-        height: 50px;
-    }
-
-    .logo-image-small {
-        height: 30px;
-    }
-    
-    .main-nav ul li a {
-        font-size: 0.9em;
-    }
+button[type="submit"]:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
 }
