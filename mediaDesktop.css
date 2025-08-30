@@ -19,15 +19,17 @@ body {
 :root {
     --color-primary: #586E26; /* Verde da marca */
     --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
-    --color-cta: #25D366; /* Verde do WhatsApp */
+    --color-cta: RGB(117, 85, 128); /* Verde do WhatsApp */
     --color-heading: #584D42; /* Marrom para títulos */
     --color-text-light: #555; /* Cinza para textos */
+    --text-cormorant: 'Cormorant Garamond';
+    --text-neuton: 'Neuton';
+    --text-roboto: 'Roboto';
+
+
 }
 
-@font-face {
-    font-family: 'dream';
-    src: url(fonte/dream\ orphanage\ rg.otf) format('opentype');
-}
+
 
 /* ============================ */
 /* CABEÇALHO E NAVEGAÇÃO        */
@@ -104,7 +106,7 @@ body {
 }
 
 .whatsapp-button {
-    background-color: var(--color-cta);
+    background-color: var(--color-primary);
     color: #fff;
     padding: 10px 20px;
     border-radius: 50px;
@@ -115,7 +117,8 @@ body {
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E;
+    background-color: #586e269f;
+    color: #333;
 }
 
 .main-header.scrolled .whatsapp-button {
@@ -124,10 +127,10 @@ body {
 }
 
 /* ============================ */
-/* SEÇÃO DE DESTAQUE (HERO)     */
+/* SEÇÃO DE DESTAQUE     */
 /* ============================ */
 
-main > section {
+#Section01 {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -137,44 +140,41 @@ main > section {
     gap: 40px;
 }
 
-main > section h1, main > section p {
+.Section02 h1,  .Section02 p {
     text-align: left;
     margin-bottom: 20px;
 }
 
-main > section > h1 {
-    font-family: 'dream', serif;
-    font-size: 3.5em;
+ .Section02 > h1 {
+    font-size: 4em;
+    font-weight: bold;
     color: var(--color-heading);
-    line-height: 1.0px;
+    line-height: 60px;
     letter-spacing: 1.0px;
 }
 
-main > section > p {
+main >.Section02 > p {
     font-size: 1.2em;
     color: var(--color-text-light);
 }
 
-.hero-content {
+.Section02 {
     flex: 1;
     max-width: 50%;
 }
 
-.hero-content > h1, .hero-content > p {
+.Section02 > h1, .Section02 > p {
     text-align: left;
     font-family: 'Neuton';
 }
 
-.hero-content h1 {
-    font-size: 2.5em;
-}
 
-.hero-content p {
-    font-size: 1.2em;
+.Section02 > p {
+    font-size: 1.5em;
 }
 
 /* Imagem da nutricionista */
-main > section > img {
+#Section01 > img {
     max-width: 50%;
     height: 900px;
     object-fit: cover;
@@ -191,23 +191,27 @@ main > section > img {
     align-items: flex-start;
     padding: 0;
     max-width: 500px;
-}
-
-#whatsappForm {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 50px;
-    font-family: 'Neuton';
     
 }
 
-#whatsappForm h1 {
-    font-size: 1.5em;
-    margin-bottom: -10px;
-    text-align: center;
+#whatsappForm {
+    width: 85%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top:10px;
+    font-family: 'Neuton';
+    
+    
+}
+
+#whatsappForm > h1 {
+    font-size: 2.5em;
+    
+    font-family: var(--text-roboto);
+    color: var(--color-text-light);
+    width: 700px;
 }
 
 label {
@@ -216,8 +220,7 @@ label {
     display: block;
 }
 
-input[type="text"],
-textarea {
+input[type="text"], textarea {
     width: 100%;
     padding: 15px 20px;
     border: 1px solid #ccc;
@@ -227,8 +230,7 @@ textarea {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-textarea:focus {
+input[type="number"]:focus, textarea:focus {
     border-color: var(--color-primary);
 }
 
@@ -241,7 +243,7 @@ button[type="submit"] {
     width: 100%;
     padding: 15px 20px;
     border: none;
-    background-color: var(--color-cta);
+    background-color: var(--color-primary);
     color: #fff;
     border-radius: 50px;
     font-size: 1.1em;
@@ -251,6 +253,349 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #128C7E;
+    background-color: #586e26b6;
     transform: translateY(-2px);
+}
+
+
+/*Planos de serviço  */
+
+#servicos, #planos, #avaliacoes {
+    background-color: var(--color-background);
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#servicos h2, #planos h2, #avaliacoes h2 {
+    font-size: 2.5em;
+    font-family: 'dream', serif;
+    color: var(--color-heading);
+    margin-bottom: 50px;
+}
+
+
+/* Estilo para os cards de planos */
+.planos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.plano-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.plano-card.popular {
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.plano-card.popular::before {
+    content: "Plano mais popular";
+    position: absolute;
+    top: -15px;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color: var(--color-cta);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.plano-card.custo {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card.custo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.plano-card.custo {
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.plano-card.custo::before {
+    content: "Melhor custo-benefício";
+    position: absolute;
+    top: -15px;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color: var(--color-cta);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+
+
+/* Estilos para a nova etiqueta do plano */
+.plano-card.custo-beneficio {
+    border: 3px solid #75925c;
+}
+
+/* Estilos para o botão "Agendar Consulta" com a seta */
+.agendar-button .arrow-icon {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.plano-card h3 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.plano-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.plano-card ul li {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.plano-card .preco {
+    font-size: 1.5em;
+    color: var(--color-heading);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.agendar-button {
+    display: block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.agendar-button:hover {
+    background-color: #75925c;
+
+}
+/*Plano Acompanhamento nutri*/
+
+
+
+
+
+
+/*Plano express*/
+
+#como-funciona {
+    margin-top: 105px;
+    background-color:bisque;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#como-funciona > h2 {
+    font-size: 2.5em;
+    font-family: 'dream';
+    font-weight: bold;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#como-funciona  p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.cards-container .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border: 2px solid var(--color-cta);
+}
+
+.cards-container .card h3 {
+    font-size: 1.2em;
+    color: #755580;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #755580;
+    padding-bottom: 5px;
+}
+
+.cards-container .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cards-container .card li {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+/*avaliações*/
+.tituloAvaliacoes > h1{
+    margin-top: 30px;
+    margin-bottom: -10px;
+    text-align: center;
+    font-family: var(--text02);
+}
+
+#avaliacoes a {
+    text-decoration: none;
+}
+
+
+
+#avaliacoes {
+    background-color: var(--color-background);
+    padding: 80px 50px;
+    text-align: left;
+
+}
+
+#avaliacoes h2 {
+    font-size: 2.5em;
+    font-family: 'dream', serif;
+    color: var(--color-heading);
+    margin-bottom: 50px;
+    position: relative;
+    left: 50%;
+}
+
+.avaliacoes-container {
+    position: relative; /* Essencial para que os grupos fiquem no lugar certo */
+    width: 90%;
+    margin: 50px auto;
+    /* Remover a propriedade max-height para evitar problemas de layout */
+}
+
+.avaliacao-group {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; /* Esta linha empilha os grupos no mesmo lugar */
+    top: 0; /* Alinha no topo do contêiner */
+    left: 0; /* Alinha à esquerda do contêiner */
+    width: 100%; /* Garante que o grupo ocupe toda a largura */
+
+    /* Configuração para o layout dos cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    /* Transições */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.avaliacao-group.active {
+    opacity: 1;
+    visibility: visible;
+    position: static; /* Volta para o fluxo normal quando ativo */
+}
+/* O resto do código dos cards permanece o mesmo */
+.avaliacao-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--color-primary);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+}
+
+.avaliacao-card h4 {
+    font-size: 1.2em;
+    color: var(--color-heading);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.avaliacao-card p {
+    font-style: italic;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.google-review-link {
+    text-align: right;
+}
+
+.google-review-link img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.google-review-link img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+    .avaliacao-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .avaliacao-group {
+        grid-template-columns: 1fr;
+    }
 }

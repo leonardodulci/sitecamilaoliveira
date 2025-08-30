@@ -9,36 +9,35 @@
  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="mediaDesktop.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-    <a href="#inicio" class="logo-link">
+    <header class="main-header" id="header">
+    <a href="#header" class="logo-link">
         <img src="imagens/camila-oliveira---1.png" alt="Logo Camila Oliveira" class="logo-image-large">
         <img src="imagens/logoCO.png" alt="Logo Camila Oliveira" class="logo-image-small">
     </a>
     <nav class="main-nav">
         <ul>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#planos">Serviços</a></li>
             <li><a href="#avaliacoes">Avaliações</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="#localizacao">Localização</a></li>
         </ul>
     </nav>
     <a href="https://api.whatsapp.com/..." target="_blank" class="whatsapp-button">
-        Agendar Consulta
+        Inicie sua transformação 
     </a>
 </header>
 <main>
-    <section>
-    <div class="hero-content">
+    <section id="Section01">
+    <div class="Section02">
         <h1>NUTRIÇÃO QUE TRANSFORMA, COM FOCO EM VOCÊ E SUA JORNADA.</h1>
         <p>Nutricionista referência em saúde feminina, emagrecimento saudável e controle de distúrbios hormonais. Uma abordagem empática e personalizada, focada em resultados duradouros e em uma vida com mais energia</p>
-        <br>
         <div class="q1">
             <form id="whatsappForm">
-                <h1>Formulário de Contato</h1>
+                <h1>Vamos iniciar a sua jornada saudável? </h1>
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required autocomplete="name">
                 
@@ -54,6 +53,274 @@
     </div>
     <img src="imagens/DSC04103.JPG" alt="foto principal">
 </section>
+
+<section id="planos">
+    <h1>Nossos serviços</h1>
+
+<section class="AcompanhamentoNutricional">
+    <h2>Planos de Acompanhamento</h2> 
+    <div class="planos-container" id="planos-acompanhamento">
+    <div class="plano-card">
+            <h3>Start</h3>
+            <p>1 consulta presencial ou online</p>
+            <ul>
+                <li>30 dias de acompanhamento</li>
+                <li>Plano alimentar personalizado</li>
+                <li>Suporte diário via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>Material de apoio pós consulta</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5561998817667&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Start." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+  
+        <div class="plano-card popular">
+            <h3>Glow</h3>
+            <p>5 consultas presenciais ou online</p>
+            <ul>
+                <li>180 dias de acompanhamento</li>
+                <li>Plano alimentar personalizado</li>
+                <li>Suporte diário via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>Material de apoio pós consulta</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5561998817667&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Glow." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+        <div class="plano-card custo">
+            <h3>Power</h3>
+            <p>3 consultas presenciais ou online</p>
+            <ul>
+                <li>90 dias de acompanhamento</li>
+                <li>Plano alimentar personalizado</li>
+                <li>Suporte diário via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>Material de apoio pós consulta</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5561998817667&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Power." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="como-funciona">
+    <div class="como-funciona-texto">
+        <h2>COMO FUNCIONA O DESCOMPLICA EXPRESS?</h2>
+        <p>Você preenche um questionário inicial com seus objetivos, hábitos e preferências alimentares e rotina.</p>
+        <p>Com base nas suas respostas, eu elaboro seu plano alimentar personalizado e você recebe tudo em até 5 dias.</p>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <h3>AVALIAÇÃO FÍSICA</h3>
+            <ul>
+                <li>Feita por fotos, o que permite acompanhar sua evolução de forma prática e visual.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>FEEDBACK MENSAL & AJUSTES NO PLANO</h3>
+            <ul>
+                <li>2 feedback por mês via aplicativo</li>
+                <li>Até 2 ajustes mensais no plano alimentar</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>SUPORTE VIA WHATSAPP</h3>
+            <ul>
+                <li>Contato direto comigo pelo WhatsApp, com respostas às terças e quintas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Planos Descomplica Express</h2>
+    <div class="planos-container" id="planos-descomplica">
+        
+        <div class="plano-card">
+            <h3>Spark</h3>
+            <ul>
+                <li>30 dias de acompanhamento</li>
+                <li>Suporte semanal via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>2 feedback + 2 ajustes no plano</li>
+                <li>+1 avaliação física</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Spark." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+        <div class="plano-card popular">
+            <h3>Boost</h3>
+            <ul>
+                <li>60 dias de acompanhamento</li>
+                <li>Suporte semanal via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>4 feedback + 4 ajustes no plano</li>
+                <li>+2 avaliações físicas</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Boost." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+        <div class="plano-card custo">
+            <h3>Flow</h3>
+            <ul>
+                <li>90 dias de acompanhamento</li>
+                <li>Suporte semanal via WhatsApp</li>
+                <li>Acesso à dieta por aplicativo</li>
+                <li>6 feedback + 6 ajustes no plano</li>
+                <li>+3 avaliações físicas</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Boost." class="agendar-button" target="_blank">Mais informações</a>
+        </div>
+    </div>
+</section>
+
+
+</section>
+  <section class="tituloAvaliacoes">
+    <h1>Avaliações</h1>
+      <section id="avaliacoes">
+        
+        <div class="avaliacoes-container" >
+            <div class="avaliacao-group active">
+                <div class="avaliacao-card">
+                    <h4>Gabriel Ramos</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+      
+                    <p>"Camila é a melhor nutricionista que já encontrei. Dedicada e extremamente atenciosa, me ajudou a obter meus resultados de maneira muito honesta... É uma pessoa muito gentil e tem as melhores receitas e o melhor plano nutricional. Recomendo fortemente! "<br><br><br><br><br><br></p>
+                    <a href="https://share.google/G00wmkRPsaNCGVFqd" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Daniel Pacheco</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"A Camila é uma profissional excepcional! Extremamente dedicada e preocupada com o bem estar dos seus pacientes, tanto durante as consultas quanto no acompanhamento posterior. Ela está sempre disponível para tirar dúvidas e aberta a novas ideias. Recomendo fortemente!"<br><br><br><br><br><br></p>
+                    <a href="https://share.google/EOGetvPGCDPBhnCuM" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+      
+                <div class="avaliacao-card">
+                    <h4>Gabriela Magalhães</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"A Camila mudou minha relação com a comida e, o mais importante de tudo, me ajudou a construir uma relação muito boa com meu corpo! Desde que começamos o acompanhamento, minha saúde e minha consciência alimentar melhoraram muito. O simples funciona e a Camila prova isso em toda consulta, sem dieta maluca, sem restrição. Tem docinho, tem salada e ela vai dar um jeito de encaixar suas comidas favoritas da melhor forma possível, no final nem parece que a gente tá fazendo dieta."</p>
+                    <a href="https://share.google/msoogczl9CZFtDQuG" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Fabiana Araujo</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <br><br>
+                    <p>"Melhor e a última nutricionista que você terá em sua vida! Dedicada, atenciosa e vai mudar sua relação com a comida! Indico de olhos fechados! A única que me fez variar minha alimentação nos quesitos frutas verduras e legumes! Gratidão!!!"<br><br><br><br><br><br></p>
+                    <a href="https://share.google/6svktwB0YTLM7HTOS" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+            </div>
+            <div class="avaliacao-group">
+                <div class="avaliacao-card">
+                    <h4>Carol Daia</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"A melhor nutricionista que você irá encontrar. Acompanhamento personalizado e frequente, faz toda a diferença. Indico a Camila um milhão de vezes!"<br><br><br><br><br><br><br><br></p>
+                    <a href="https://share.google/kowy4qgY8EDFdXms5" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+      
+                    <h4>Aline Viana</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Obrigada por me ajudar a me alimentar de uma forma mais saudável, sem deixar de comer o que gosto e, de quebra, emagrecer. Com certeza faz diferença poder contar com o apoio e com as explicações de quem entende do assunto."<br><br><br><br><br><br></p>
+                    <a href="LINK_DA_AVALIACAO_AQUI" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Karen Rodrigues</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Maravilhoso!!! Atendimento incrível que se preocupa com a gente desde quando chegamos até a manutenção da make na festa. Produção que realçou demais minha beleza! Super recomendo!"<br><br><br><br><br><br></p>
+                    <a href="LINK_DA_AVALIACAO_AQUI" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Isadora Araujo</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"A primeira vez que fiz maquiagem profissional foi com a Luana e eu amei! Super atenciosa, delicada no momento de fazer a maquiagem, além de ter realçado a minha beleza, não ficou nada exagerado! Super indico!"<br><br><br><br><br><br></p>
+                    <a href="LINK_DA_AVALIACAO_AQUI" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+            </div>
+            <div class="avaliacao-group">
+                <div class="avaliacao-card">
+                    <h4>Larissa Castro de Oliveira</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Ser paciente da Camila foi um dos melhores investimentos que já fiz por mim, recomendo sempre! O consultório é super aconchegante e os atendimentos são feitos no horário agendado sem atrasos (até o momento fiz três consultas). A Camila realmente escutou meus hábitos e rotina alimentar, montou a dieta na hora e alinhou cada detalhe comigo. Além disso, sempre que precisei de ajustes e pedi pelo whatsapp, era atendida e tinha o ajuste na hora, o que facilita demais a adesão à dieta! Estou feliz com meus resultados e não troco de profissional por nada mais!"</p>
+                    <a href="LINK_DA_AVALIACAO_AQUI" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Kamilla Tharrany</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"A Camila é maravilhosa! A consulta vai muito além da entrega do plano alimentar, mas esse é uma construção maravilhosa: fácil e delicioso. Acho que realmente vai ser minha última nutricionista."<br><br><br><br><br><br></p>
+                    <a href="https://share.google/XrIZa71FmOfY7eV5k" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Nathália Melo</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"PROFISSIONAL INCRÍVEL! A melhor nutricionista que eu poderia indicar... Com um foco em reeducação alimentar e ajustando as quantidades de comida, sem cortar o docinho de sobremesa e ainda vivendo normalmente perdi 10kg..."<br><br><br><br><br><br></p>
+                    <a href="https://share.google/8MmtFu2xR3myWS6Qz" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Victória Comin</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Já havia passado por alguns nutricionistas anteriormente, e nunca consegui aderir um plano alimentar. O acompanhamento da Camila é diferenciado e personalizado, ela engloba sua rotina, suas necessidades. Recomendo de olhos fechados"<br><br><br><br><br><br></p>
+                    <a href="https://share.google/ShHRuxLOVDZdPJOZZ" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+            </div>
+      
+            <div class="avaliacao-group">
+                <div class="avaliacao-card">
+                    <h4>Maysa Gomes</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Simplesmente a melhor. Tenho fibromialgia, hipotireoidismo, endometriose profunda, ansiedade generalizada... sai de um quadro de obesidade, perdi praticamente 10Kg, ganhei músculo e restaurei minha saúde. Hoje praticamente não sinto dores. Sou eternamente grata e não troco minha nutri por nada."<br><br><br><br></p>
+                    <a href="https://share.google/yZSQQZMQvzXglH7RJ" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Melissa Arias</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Recomendo Camila como sua nutricionista, com certeza! Sempre atenciosa, esclarece todas as dúvidas, gosto muito do acompanhamento semanal dela com perguntas sobre os alimentos, mudancas necessárias no plano etc. E não posso deixar de falar da sua empatia, paciência e seu atendimento humanizado."<br><br><br><br></p>
+                    <a href="https://share.google/sFsuHsA34oEtcm63A" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Dani Catunda</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Excelente nutricionista! Camila é muito competente e atenciosa. Escuta com atenção nossas necessidades e é presente após as consultas, sempre buscando deixar o plano alimentar ajustado as nossas necessidades.."<br><br><br><br><br><br></p>
+                    <a href="https://share.google/XhjQFjqeqLYm0xDRL" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+                <div class="avaliacao-card">
+                    <h4>Alexandra Silveira</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"O acompanhamento com a Camila tem sido muito proveitoso. Ela é super atenciosa às nossas necessidades e faz com que as dietas se encaixem na nossa realidade, e não o contrário. Tenho gostado muito do processo."<br><br><br><br><br><br></p>
+                    <a href="https://share.google/B8kJDGzRKQXJRrdlW" target="_blank" class="google-review-link">
+                        <img src="imagens/google.png" alt="Ver no Google">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
  </main>
 <footer>
 
@@ -61,4 +328,5 @@
 </body>
 
     <script src="header(rolagem).js"></script>
+    <script src="formWpp.js"></script>
 </html>
