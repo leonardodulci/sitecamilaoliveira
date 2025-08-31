@@ -19,6 +19,7 @@ body {
 :root {
     --color-primary: #586E26; /* Verde da marca */
     --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
+    --color-Text: #8d676775;
     --color-cta: RGB(117, 85, 128); /* Verde do WhatsApp */
     --color-heading: #584D42; /* Marrom para títulos */
     --color-text-light: #555; /* Cinza para textos */
@@ -221,7 +222,7 @@ label {
 }
 
 input[type="text"], textarea {
-    width: 100%;
+    width: 80%;
     padding: 15px 20px;
     border: 1px solid #ccc;
     border-radius: 50px;
@@ -240,7 +241,7 @@ textarea {
 }
 
 button[type="submit"] {
-    width: 100%;
+    width: 80%;
     padding: 15px 20px;
     border: none;
     background-color: var(--color-primary);
@@ -257,19 +258,312 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+/*Sobre mim e meu metodo*/
+#sobre-mim {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#sobre-mim > h2 { /* O título principal da seção */
+    font-size: 2.5em;
+    color: var(--color-text-light); /* Verde escuro do PDF */
+    font-family: var(--text-roboto);
+    margin-bottom: 50px;
+}
+
+.container-sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+}
+
+/* Bloco Quem Sou (esquerda) */
+.bloco-quem-sou {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    height: 600px; /* Ajuste a largura conforme necessário */
+    padding-top: 50px; /* Para alinhar com a imagem central */
+}
+
+.cartao-perfil {
+    background-color: #fff;
+    border: 3px solid #72895E; /* Borda verde do PDF */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%; /* Garante que o cartão ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+.cartao-perfil h3 {
+    font-size: 2.5em;
+    color: #72895E; /* Verde escuro do PDF */
+    font-family:var(--text-roboto);
+    margin-top: 0; /* Remove margem superior desnecessária */
+    margin-bottom: 20px;
+}
+
+.descricao-perfil {
+    font-size: 1.5em;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px auto;
+}
+
+/* Seção da Foto Central */
+.secao-foto-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.imagem-central {
+    width: 600px; /* Ajuste o tamanho da imagem conforme desejar */
+    height: 790px;
+    object-fit: cover;
+    border: 2px solid #72895E; /* Borda verde ao redor da foto */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bloco Meu Método (direita) */
+.bloco-metodo {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px; /* Ajuste a largura conforme necessário */
+    text-align: left;
+    padding-top: 50px; /* Para alinhar com a imagem central */
+}
+
+.cabecalho-metodo h2 {
+    font-size: 2.5em;
+    color: #72895E; /* Verde escuro do PDF */
+    font-family: var(--text-roboto);
+    margin-bottom: 10px;
+}
+
+.cabecalho-metodo p {
+    font-size: 1.3em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.grade-pilares {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pilar-card {
+    background-color: #755580; /* Roxo escuro do PDF */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.pilar-card h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+.pilar-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #f0f0f0;
+}
+
+
+/*Serviços*/
+
+#servicos {
+    background-color: #8d676775;
+    padding: 80px 20px;
+    text-align: center;
+    padding: 100px;
+    
+}
+
+#servicos h2 {
+    font-size: 2.5em;
+    color: var(--color-text-light);
+    font-family: var(--text-roboto);
+    margin-bottom: 50px;
+}
+
+.container-servicos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.cartao-servico {
+    background-color: #fff;
+    border: 3px solid #72895E;
+    border-radius: 20px;
+    padding: 30px;
+    width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cartao-servico h3 {
+    font-size: 1.6em;
+    color: #72895E;
+    font-family: var(--text-roboto);
+    margin-bottom: 15px;
+}
+
+.cartao-servico p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #72895E;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-saiba-mais:hover {
+    background-color: #5e724a;
+}
+
+/*plano acompanhamento nutricional*/
+
+#como-funciona-acomp {
+    background-color: #f7f7f7;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#como-funciona-acomp h2 {
+    font-size: 2.5em;
+    color: #72895E;
+    margin-bottom: 20px;
+}
+
+#como-funciona-acomp p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 0px auto;
+    line-height: 1.6;
+    
+}
+
+#como-funciona-acomp p strong {
+    font-weight: bold;
+}
+
+.grade-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cartao-info {
+    margin-top: 50px;
+    background-color: #ffffff;
+    color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cartao-info h3 {
+    font-size: 1.2em;
+    font-family: 'dream', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #a396a6;
+    padding-bottom: 10px;
+    font-family: var(--text-roboto);
+}
+
+.cartao-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartao-info li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.container-itens-checks {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-check .icone-check-grande {
+    color: #755580;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.item-check p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
 
 /*Planos de serviço  */
 
-#servicos, #planos, #avaliacoes {
+
+
+ #planos, #avaliacoes {
     background-color: var(--color-background);
     padding: 80px 50px;
     text-align: center;
 }
 
-#servicos h2, #planos h2, #avaliacoes h2 {
+ #planos h2, #avaliacoes h2 {
     font-size: 2.5em;
-    font-family: 'dream', serif;
-    color: var(--color-heading);
+    font-family: var(--text-roboto);
+    color: var(--color-text-light);
     margin-bottom: 50px;
 }
 
@@ -289,7 +583,7 @@ button[type="submit"]:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-align: left;
-    max-width: 320px;
+    max-width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -309,7 +603,7 @@ button[type="submit"]:hover {
     top: -15px;
     left: 65%;
     transform: translateX(-50%);
-    background-color: var(--color-cta);
+    background-color: #755580;
     color: #fff;
     padding: 10px 15px;
     border-radius: 50px;
@@ -323,7 +617,7 @@ button[type="submit"]:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-align: left;
-    max-width: 320px;
+    max-width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -343,7 +637,7 @@ button[type="submit"]:hover {
     top: -15px;
     left: 65%;
     transform: translateX(-50%);
-    background-color: var(--color-cta);
+    background-color: #755580;
     color: #fff;
     padding: 10px 15px;
     border-radius: 50px;
@@ -366,10 +660,16 @@ button[type="submit"]:hover {
 
 .plano-card h3 {
     font-size: 2em;
-    color: var(--color-primary);
+    color: var(--color-cta);
     margin-bottom: 10px;
 }
 
+.plano-card p{
+    font-family: var(--text-roboto);
+    margin-bottom: 20px;
+
+
+}
 .plano-card ul {
     list-style: none;
     padding: 0;
@@ -382,11 +682,27 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
 }
 
-.plano-card .preco {
-    font-size: 1.5em;
-    color: var(--color-heading);
+.plano-card ul {
+    list-style: none; /* Remove a bolinha padrão da lista */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.plano-card li {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    color: #72895E; /* A cor verde do ícone */
     font-weight: bold;
-    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 1.2em;
 }
 
 .agendar-button {
@@ -417,16 +733,16 @@ button[type="submit"]:hover {
 
 #como-funciona {
     margin-top: 105px;
-    background-color:bisque;
+    background-color:#8d676775;
     padding: 80px 50px;
     text-align: center;
 }
 
 #como-funciona > h2 {
     font-size: 2.5em;
-    font-family: 'dream';
+    font-family: var(--text-roboto);
     font-weight: bold;
-    color: var(--color-heading);
+    color: var(--color-text-light);
     margin-bottom: 20px;
     margin-top: 30px;
     text-align: center;
@@ -458,8 +774,7 @@ button[type="submit"]:hover {
     width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
     border: 2px solid var(--color-cta);
 }
 
@@ -469,6 +784,7 @@ button[type="submit"]:hover {
     margin-bottom: 15px;
     border-bottom: 2px solid #755580;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .cards-container .card ul {
@@ -491,6 +807,8 @@ button[type="submit"]:hover {
     margin-bottom: -10px;
     text-align: center;
     font-family: var(--text02);
+    font-size: 2.5em;
+    color: var(--color-heading);
 }
 
 #avaliacoes a {
@@ -501,7 +819,7 @@ button[type="submit"]:hover {
 
 #avaliacoes {
     background-color: var(--color-background);
-    padding: 80px 50px;
+    padding: 40px 50px;
     text-align: left;
 
 }
@@ -518,7 +836,7 @@ button[type="submit"]:hover {
 .avaliacoes-container {
     position: relative; /* Essencial para que os grupos fiquem no lugar certo */
     width: 90%;
-    margin: 50px auto;
+    margin: 30px auto;
     /* Remover a propriedade max-height para evitar problemas de layout */
 }
 
