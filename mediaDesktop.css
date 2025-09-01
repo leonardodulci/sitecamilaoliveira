@@ -281,12 +281,12 @@ button[type="submit"]:hover {
     flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
 }
 
-/* Bloco Quem Sou (esquerda) */
+/* Bloco Quem Sou  */
 .bloco-quem-sou {
     flex: 1;
     min-width: 300px;
     max-width: 400px;
-    height: 600px; /* Ajuste a largura conforme necessário */
+    height: 810px; /* Ajuste a largura conforme necessário */
     padding-top: 50px; /* Para alinhar com a imagem central */
 }
 
@@ -334,12 +334,12 @@ button[type="submit"]:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Bloco Meu Método (direita) */
+/* Bloco Meu Método  */
 .bloco-metodo {
     flex: 1;
     min-width: 300px;
-    max-width: 350px; /* Ajuste a largura conforme necessário */
-    text-align: left;
+    max-width: 600px; /* Ajuste a largura conforme necessário */
+    text-align: center;
     padding-top: 50px; /* Para alinhar com a imagem central */
 }
 
@@ -369,6 +369,9 @@ button[type="submit"]:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+    width: 250pxpx;
 }
 
 .pilar-card h4 {
@@ -376,13 +379,18 @@ button[type="submit"]:hover {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-    color: black;
+    color: var(--color-primary);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
 }
 
 .pilar-card p {
     font-size: 0.9em;
     line-height: 1.4;
     color: #f0f0f0;
+  
 }
 
 
@@ -413,15 +421,16 @@ button[type="submit"]:hover {
 
 .cartao-servico {
     background-color: #fff;
-    border: 3px solid #72895E;
+    border: 2px solid #72895E;
     border-radius: 20px;
     padding: 30px;
     width: 600px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    box-shadow: 1px 1px 5px black;
+
 }
 
 .cartao-servico h3 {
@@ -471,7 +480,7 @@ button[type="submit"]:hover {
     font-size: 1.1em;
     color: #555;
     max-width: 800px;
-    margin: 0 auto 0px auto;
+    margin: 15px auto 0px auto;
     line-height: 1.6;
     
 }
@@ -499,6 +508,8 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     text-align: left;
+    border: 2px solid #755580;
+
 }
 
 .cartao-info h3 {
@@ -506,7 +517,7 @@ button[type="submit"]:hover {
     font-family: 'dream', serif;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid #a396a6;
+    border-bottom: 3px solid #a396a6;
     padding-bottom: 10px;
     font-family: var(--text-roboto);
 }
@@ -906,14 +917,177 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
-    .avaliacao-group {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/*footer*/
+
+#rodape {
+    background-color: #2b2b2b; /* Fundo cinza escuro */
+    color: #f0f0f0;
+    padding: 60px 20px;
+    margin: auto;
+    height: 250px;
 }
 
-@media (max-width: 768px) {
-    .avaliacao-group {
-        grid-template-columns: 1fr;
-    }
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+    max-height: 250px;
+    gap: 35px;
+    
+
+}
+
+.coluna-info {
+    flex: 1;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: left;
+
+}
+
+.coluna-info.navegacao{
+    margin-right: -80px;
+}
+
+.logo-rodape {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+    margin-right: 10px;
+}
+
+.logo-rodape img {
+    margin-top: 25px;
+    height: 180px; /* Ajuste o tamanho da sua logo aqui */
+}
+
+.texto-logo p {
+    margin: 0;
+    font-size: 1.3em;
+    font-family: var(--text-roboto);
+    color: #f0f0f0;
+    text-align: left;
+    width: 240px;
+}
+
+.coluna-info h4 {
+    font-size: 1.2em;
+    color: #72895E; /* Verde escuro do PDF */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: var(--text-roboto);
+    text-align: left;
+}
+
+
+.coluna-info ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.coluna-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.coluna-info.atendimento > a{
+    text-align: left;
+    margin-left: 10px;
+}
+.coluna-info.atendimento > p{
+   margin-bottom: 15px;
+    text-align: left;
+
+
+}
+
+
+.coluna-info a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.coluna-info a:hover {
+    color: #72895E;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.container-botoes > a{
+    margin-left: -10px;
+}
+
+.botao-mapa {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #555;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.botao-mapa img {
+    height: 20px;
+    padding-left: 5px;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.link-social img {
+    height: 20px;
+}
+
+.coluna-info.redes-sociais > a{
+    margin-left: 15px;
+    width: 250px;
+    font-size: 13px;
+}
+
+
+/*bnt wpp flutuante*/
+
+.botao-wpp-flutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100; /* Garante que o botão fique acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-wpp-flutuante img {
+    width: 35px;
+    height: 35px;
+}
+
 }
