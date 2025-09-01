@@ -1,0 +1,474 @@
+@charset "UTF-8";
+@media screen and (min-width:250px) and (max-width: 767px) {
+    /* ==================== */
+    /* ESTILOS GLOBAIS      */
+    /* ==================== */
+
+    :root {
+        --color-primary: #586E26;
+        --color-secondary: #EBE9E6;
+        --color-Text: #8d676775;
+        --color-cta: RGB(117, 85, 128);
+        --color-heading: #584D42;
+        --color-text-light: #555;
+        --text-cormorant: 'Cormorant Garamond';
+        --text-neuton: 'Neuton';
+        --text-roboto: 'Roboto';
+    }
+
+    body {
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    /* ============================ */
+    /* CABEÇALHO E NAVEGAÇÃO        */
+    /* ============================ */
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.main-header.scrolled {
+    height: 30px;
+    padding: 10px ;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin: auto;
+    text-align: center;    
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image-large {
+    height: 150px;
+    transition: all 0.4s ease;
+    position: relative;
+    left: -45px;
+}
+
+.logo-image-small {
+    display: none;
+    height: 40px;
+    transition: all 0.4s ease;
+}
+
+.main-header.scrolled .logo-image-large {
+    display: none;
+}
+
+.main-header.scrolled .logo-image-small {
+    display: block;
+}
+.main-header.scrolled .main-nav {
+    position: relative;
+    left: 80px;
+}
+
+.main-header.scrolled .main-nav > ul > li > .sobre-mimMOBILE{
+   display: none;
+}
+
+
+
+.main-header.scrolled .main-nav > ul > ul{
+    margin-left: -10px;
+}
+
+
+
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    text-align: left;
+    
+    
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+    position: relative;
+    left: -135px;
+}
+
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.main-nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+
+.whatsapp-button {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, font-size 0.4s ease, padding 0.4s ease;
+    position: relative;
+    left: -10%;
+}
+
+.whatsapp-button:hover {
+    background-color: #586e269f;
+    color: #333;
+}
+
+.main-header.scrolled .whatsapp-button {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    text-align: center;
+    width: 80px;
+}
+
+.whatsapp-button:hover {
+    background-color: #586e269f;
+    color: #333;
+
+}
+
+    /* ============================ */
+    /* SEÇÃO DE DESTAQUE            */
+    /* ============================ */
+
+#Section01 {
+    display: flex;
+    flex-direction: column; /* Coloca o texto em cima e a área de conteúdo abaixo */
+    align-items: center;
+    padding: 50px;
+}
+
+.Section02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza os textos */
+    max-width: 100%;
+}
+
+.Section02 > h1 {
+      font-size: 4em;
+    font-weight: bold;
+    color: var(--color-heading);
+    line-height: 60px;
+    letter-spacing: 0.8px;
+    margin-bottom: -10px;
+}
+
+.Section02 > p {
+    font-size: 1.2em;
+    font-family: var(--text-roboto);
+}
+
+/* ==================== */
+/* ÁREA DO FORMULÁRIO E IMAGEM */
+/* ==================== */
+
+
+#whatsappForm {
+    /* O formulário ocupa 50% do espaço disponível */
+    flex: 1; 
+    max-width: 45%;
+    text-align: left;
+}
+
+#Section01 > img {
+    /* A imagem também ocupa 50% do espaço disponível */
+    flex: 1;
+    max-width: 65%;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    top: -370px;
+    left: 120px;
+}
+
+#whatsappForm > h1 {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+    font-family: var(--text-roboto);
+}
+#whatsappForm > label{
+    font-family: var(--text-cormorant);
+}
+#whatsappForm > input textarea{
+    border: 2px solid black;
+}
+
+input[type="text"], button[type="submit"]  {
+    width: 100%; /* Ocupam a largura total do formulário */
+    border-radius: 5px;
+    font-family: var(--text-roboto);
+    font-weight: bold;
+    color: #fff;
+ 
+}
+
+#whatsappForm  > button{
+    background-color: var(--color-primary);
+}
+
+    /* ============================ */
+    /* SOBRE MIM E MEU MÉTODO       */
+    /* ============================ */
+    
+    #sobre-mim {
+        padding: 60px 20px;
+        margin-top: 50px;
+    }
+    
+    .container-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .secao-foto-central {
+        display: none; /* Oculta a foto principal para a mobile */
+    }
+
+    .bloco-quem-sou {
+        max-width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .bloco-metodo {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .pilar-card {
+        width: 100%;
+    }
+
+    .grade-pilares {
+        grid-template-columns: 1fr;
+    }
+
+    /* ============================ */
+    /* SERVIÇOS                     */
+    /* ============================ */
+
+    #servicos {
+        padding: 60px 20px;
+    }
+    
+    #servicos h2 {
+        font-size: 2em;
+    }
+
+    .container-servicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartao-servico {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* ============================ */
+    /* PLANOS DE ACOMPANHAMENTO     */
+    /* ============================ */
+
+    #como-funciona-acomp {
+        padding: 60px 20px;
+    }
+    
+    #como-funciona-acomp h2 {
+        font-size: 2em;
+    }
+
+    .grade-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartao-info {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .container-itens-checks {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .plano-card {
+        width: 100%;
+    }
+
+    .plano-card.popular::before,
+    .plano-card.custo::before {
+        left: 50%;
+        font-size: 0.7em;
+        top: -10px;
+    }
+    
+    /* ============================ */
+    /* DESCOMPLICA EXPRESS          */
+    /* ============================ */
+
+    #como-funciona {
+        margin-top: 50px;
+        padding: 60px 20px;
+    }
+    
+    #como-funciona > h2 {
+        font-size: 2em;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cards-container .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* ============================ */
+    /* AVALIAÇÕES                   */
+    /* ============================ */
+
+    .tituloAvaliacoes > h1 {
+        font-size: 2em;
+    }
+
+    #avaliacoes {
+        padding: 20px;
+    }
+
+    .avaliacao-group.active {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avaliacao-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* ============================ */
+    /* RODAPÉ                       */
+    /* ============================ */
+
+    #rodape {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .container-rodape {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .coluna-info {
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .coluna-info.info-principal {
+        order: -1;
+    }
+    
+    .logo-rodape {
+        display: none;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .texto-logo p {
+        text-align: center;
+        font-size: 1em;
+        width: auto;
+    }
+    
+    .coluna-info.navegacao,
+    .coluna-info.atendimento,
+    .coluna-info.redes-sociais,
+    .coluna-info.como-chegar {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .coluna-info h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .coluna-info ul {
+        text-align: center;
+    }
+    
+    .coluna-info ul li {
+        text-align: center;
+    }
+    
+    .link-social {
+        justify-content: center;
+    }
+    
+    .container-botoes {
+        align-items: center;
+    }
+
+    .botao-mapa {
+        width: 180px;
+    }
+
+    /* Botão flutuante */
+    .botao-wpp-flutuante {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .botao-wpp-flutuante img {
+        width: 30px;
+        height: 30px;
+    }
+}
