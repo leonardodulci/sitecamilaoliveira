@@ -1,53 +1,74 @@
 @charset "UTF-8";
-@media screen and (min-width:250px) and (max-width: 767px) {
-    /* ==================== */
-    /* ESTILOS GLOBAIS      */
-    /* ==================== */
+@media screen and (min-width:200px) and (max-width:500px){
+    
+/* ==================== */
+/* ESTILOS GLOBAIS      */
+/* ==================== */
 
-    :root {
-        --color-primary: #586E26;
-        --color-secondary: #EBE9E6;
-        --color-Text: #8d676775;
-        --color-cta: RGB(117, 85, 128);
-        --color-heading: #584D42;
-        --color-text-light: #555;
-        --text-cormorant: 'Cormorant Garamond';
-        --text-neuton: 'Neuton';
-        --text-roboto: 'Roboto';
-    }
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box; 
+}
 
-    body {
-        font-size: 14px;
-        margin: 0px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
 
-    /* ============================ */
-    /* CABEÇALHO E NAVEGAÇÃO        */
-    /* ============================ */
+:root {
+    --color-primary: #586E26; /* Verde da marca */
+    --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
+    --color-Text: #8d676775;
+    --color-cta: RGB(117, 85, 128); /* Verde do WhatsApp */
+    --color-heading: #584D42; /* Marrom para títulos */
+    --color-text-light: #555; /* Cinza para textos */
+    --text-cormorant: 'Cormorant Garamond';
+    --text-neuton: 'Neuton';
+    --text-roboto: 'Roboto';
+
+
+}
+
+
+
+/* ============================ */
+/* CABEÇALHO E NAVEGAÇÃO        */
+/* ============================ */
 
 .main-header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: auto;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
     transition: all 0.4s ease;
+    width: 101vw;
 }
+   .main-header {
+        /* Torna o header mais compacto para mobile */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo-link {
+        width: 100%; /* Garante que a logo ocupe a linha inteira */
+        margin-bottom: 10px;
+    }
 
 .main-header.scrolled {
-    height: 30px;
-    padding: 10px ;
+    width: 100vw;
+    height: 40px;
     background-color: rgba(255, 255, 255);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin: auto;
-    text-align: center;    
+    
 }
-
 
 .logo-link {
     display: flex;
@@ -55,10 +76,9 @@
 }
 
 .logo-image-large {
-    height: 150px;
+    height: 90px;
     transition: all 0.4s ease;
-    position: relative;
-    left: -45px;
+
 }
 
 .logo-image-small {
@@ -73,402 +93,988 @@
 
 .main-header.scrolled .logo-image-small {
     display: block;
+    5px;
 }
-.main-header.scrolled .main-nav {
+
+.main-header.scrolled  li{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.main-nav {
     position: relative;
-    left: 80px;
+    left: -20px;
 }
-
-.main-header.scrolled .main-nav > ul > li > .sobre-mimMOBILE{
-   display: none;
-}
-
-
-
-.main-header.scrolled .main-nav > ul > ul{
-    margin-left: -10px;
-}
-
-
 
 
 .main-nav ul {
     display: flex;
     list-style: none;
-    text-align: left;
-    
-    
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav ul li {
-    margin-left: 25px;
-    position: relative;
-    left: -135px;
+    margin-left: 14px;
+    font-size: 12px;
 }
-
 
 .main-nav ul li a {
     text-decoration: none;
     color: var(--color-text-light);
     font-weight: 500;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+    font-size: 12px;
+    transition: color 0.3s ease; 
+    
 }
-
-
-
 
 .main-nav ul li a:hover {
     color: var(--color-primary);
 }
 
+.sobre-mimMOBILE{
+    display: none;
+}
+
 
 .whatsapp-button {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-    transition: background-color 0.3s ease, font-size 0.4s ease, padding 0.4s ease;
-    position: relative;
-    left: -10%;
+  display: none;
 }
 
-.whatsapp-button:hover {
-    background-color: #586e269f;
-    color: #333;
-}
 
-.main-header.scrolled .whatsapp-button {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 20px;
-    text-align: center;
-    width: 80px;
-}
 
-.whatsapp-button:hover {
-    background-color: #586e269f;
-    color: #333;
 
-}
-
-    /* ============================ */
-    /* SEÇÃO DE DESTAQUE            */
-    /* ============================ */
+/* ============================ */
+/* SEÇÃO DE DESTAQUE     */
+/* ============================ */
 
 #Section01 {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Coloca o texto em cima e a área de conteúdo abaixo */
+    justify-content: center;
     align-items: center;
-    padding: 50px;
+    background-color: var(--color-background);
+    gap: 40px;
 }
 
-.Section02 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Centraliza os textos */
-    max-width: 100%;
+.Section02 h1,  .Section02 p {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.Section02 > h1 {
-      font-size: 4em;
+ .Section02 > h1 {
+    font-size: 3em;
     font-weight: bold;
     color: var(--color-heading);
     line-height: 60px;
-    letter-spacing: 0.8px;
-    margin-bottom: -10px;
+    letter-spacing: 1.0px;
+    margin-top: 100px;
 }
+
+main >.Section02 > p {
+    font-size: 1.2em;
+    color: var(--color-text-light);
+}
+
+.Section02 {
+    flex: 1;
+    max-width: 50%;
+}
+
+.Section02 > h1, .Section02 > p {
+    text-align: left;
+    font-family: 'Neuton';
+}
+
 
 .Section02 > p {
-    font-size: 1.2em;
-    font-family: var(--text-roboto);
+    font-size: 1.5em;
 }
 
-/* ==================== */
-/* ÁREA DO FORMULÁRIO E IMAGEM */
-/* ==================== */
-
-
-#whatsappForm {
-    /* O formulário ocupa 50% do espaço disponível */
-    flex: 1; 
-    max-width: 45%;
-    text-align: left;
-}
-
+/* Imagem da nutricionista */
 #Section01 > img {
-    /* A imagem também ocupa 50% do espaço disponível */
-    flex: 1;
-    max-width: 65%;
-    height: 900px;
+    max-width: 35%;
+    height: 650px;
     object-fit: cover;
     border-radius: 8px;
-    position: relative;
-    top: -370px;
-    left: 120px;
+    margin-top:175px;
+}
+
+/* ==================== */
+/* FORMULÁRIO           */
+/* ==================== */
+
+.q1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    
+}
+
+#whatsappForm {
+   
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top:10px;
+    font-family: 'Neuton';
+    
+    
 }
 
 #whatsappForm > h1 {
     font-size: 2.5em;
-    text-align: center;
-    width: 100%;
+    
     font-family: var(--text-roboto);
-}
-#whatsappForm > label{
-    font-family: var(--text-cormorant);
-}
-#whatsappForm > input textarea{
-    border: 2px solid black;
+    color: var(--color-text-light);
+    width: 150px;
+    
 }
 
-input[type="text"], button[type="submit"]  {
-    width: 100%; /* Ocupam a largura total do formulário */
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+input[type="text"], textarea {
+    width: 85vw;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus, textarea:focus {
+    border-color: var(--color-primary);
+}
+
+textarea {
+    border-radius: 8px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 85vw;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #586e26b6;
+    transform: translateY(-2px);
+}
+
+/*Sobre mim e meu metodo*/
+#sobre-mim {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#sobre-mim > h2 { /* O título principal da seção */
+    font-size: 2.5em;
+    color: var(--color-text-light); /* Verde escuro do PDF */
+    font-family: var(--text-roboto);
+    margin-bottom: 50px;
+}
+
+.container-sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+}
+
+/* Bloco Quem Sou  */
+.bloco-quem-sou {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    height: 810px; /* Ajuste a largura conforme necessário */
+    padding-top: 50px; /* Para alinhar com a imagem central */
+}
+
+.cartao-perfil {
+    background-color: #fff;
+    border: 3px solid #72895E; /* Borda verde do PDF */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%; /* Garante que o cartão ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+.cartao-perfil h3 {
+    font-size: 2.5em;
+    color: #72895E; /* Verde escuro do PDF */
+    font-family:var(--text-roboto);
+    margin-top: 0; /* Remove margem superior desnecessária */
+    margin-bottom: 20px;
+}
+
+.descricao-perfil {
+    font-size: 1.5em;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px auto;
+}
+
+/* Seção da Foto Central */
+.secao-foto-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.imagem-central {
+    width: 385px; /* Ajuste o tamanho da imagem conforme desejar */
+    height: 790px;
+    object-fit: cover;
+    border: 2px solid #72895E; /* Borda verde ao redor da foto */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bloco Meu Método  */
+.bloco-metodo {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px; /* Ajuste a largura conforme necessário */
+    text-align: center;
+    padding-top: 50px; /* Para alinhar com a imagem central */
+}
+
+.cabecalho-metodo h2 {
+    font-size: 2.5em;
+    color: #72895E; /* Verde escuro do PDF */
+    font-family: var(--text-roboto);
+    margin-bottom: 10px;
+}
+
+.cabecalho-metodo p {
+    font-size: 1.3em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.grade-pilares {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pilar-card {
+    background-color: #755580; /* Roxo escuro do PDF */
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+    width: 180px;
+}
+
+.pilar-card h4 {
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-primary);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.pilar-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #f0f0f0;
+  
+}
+
+
+/*Serviços*/
+
+#servicos {
+    background-color: #8d676775;
+    padding: 80px 20px;
+    text-align: center;
+    
+}
+
+#servicos h2 {
+    font-size: 2.5em;
+    color: var(--color-text-light);
+    font-family: var(--text-roboto);
+    margin-bottom: 50px;
+}
+
+.container-servicos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.cartao-servico {
+    background-color: #fff;
+    border: 2px solid #72895E;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+    height: 420px;
+
+}
+
+.cartao-servico h3 {
+    font-size: 1.6em;
+    color: #72895E;
+    font-family: var(--text-roboto);
+    margin-bottom: 40px;
+}
+
+.cartao-servico p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #72895E;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-saiba-mais:hover {
+    background-color: #5e724a;
+}
+
+/*plano acompanhamento nutricional*/
+
+#como-funciona-acomp {
+    background-color: #f7f7f7;
+    padding: 80px 10px;
+    text-align: center;
+}
+
+#como-funciona-acomp h2 {
+    font-size: 2.5em;
+    color: #72895E;
+    margin-bottom: 20px;
+}
+
+#como-funciona-acomp p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 15px auto 0px auto;
+    line-height: 1.6;
+    
+}
+
+#como-funciona-acomp p strong {
+    font-weight: bold;
+}
+
+.grade-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cartao-info {
+    margin-top: 50px;
+    background-color: #ffffff;
+    color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 2px solid #755580;
+
+}
+
+.cartao-info h3 {
+    font-size: 1.2em;
+    font-family: 'dream', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #a396a6;
+    padding-bottom: 10px;
+    font-family: var(--text-roboto);
+}
+
+.cartao-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartao-info li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.container-itens-checks {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-check .icone-check-grande {
+    color: #755580;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.item-check p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+/*Planos de serviço  */
+
+
+
+ #planos, #avaliacoes {
+    background-color: var(--color-background);
+    padding: 80px 50px;
+    text-align: center;
+}
+
+ #planos h2, #avaliacoes h2 {
+    font-size: 2.0em;
+    font-family: var(--text-roboto);
+    color: var(--color-text-light);
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+
+/* Estilo para os cards de planos */
+.planos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.plano-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.plano-card.popular {
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.plano-card.popular::before {
+    content: "Plano mais popular";
+    position: absolute;
+    top: -15px;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color: #755580;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.plano-card.custo {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card.custo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.plano-card.custo {
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.plano-card.custo::before {
+    content: "Melhor custo-benefício";
+    position: absolute;
+    top: -15px;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color: #755580;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+
+
+/* Estilos para a nova etiqueta do plano */
+.plano-card.custo-beneficio {
+    border: 3px solid #75925c;
+}
+
+/* Estilos para o botão "Agendar Consulta" com a seta */
+.agendar-button .arrow-icon {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.plano-card h3 {
+    font-size: 2em;
+    color: var(--color-cta);
+    margin-bottom: 10px;
+}
+
+.plano-card p{
+    font-family: var(--text-roboto);
+    margin-bottom: 20px;
+
+
+}
+.plano-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.plano-card ul li {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.plano-card ul {
+    list-style: none; /* Remove a bolinha padrão da lista */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.plano-card li {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    color: #72895E; /* A cor verde do ícone */
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.agendar-button {
+    display: block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.agendar-button:hover {
+    background-color: #75925c;
+
+}
+/*Plano Acompanhamento nutri*/
+
+
+
+
+
+
+/*Plano express*/
+
+#como-funciona {
+    margin-top: 105px;
+    background-color:#8d676775;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#como-funciona > h2 {
+    font-size: 2.5em;
     font-family: var(--text-roboto);
     font-weight: bold;
-    color: #fff;
- 
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.2;
 }
 
-#whatsappForm  > button{
-    background-color: var(--color-primary);
+#como-funciona  p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    
 }
 
-    /* ============================ */
-    /* SOBRE MIM E MEU MÉTODO       */
-    /* ============================ */
-    
-    #sobre-mim {
-        padding: 60px 20px;
-        margin-top: 50px;
-    }
-    
-    .container-sobre-mim {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .secao-foto-central {
-        display: none; /* Oculta a foto principal para a mobile */
-    }
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
 
-    .bloco-quem-sou {
-        max-width: 100%;
-        height: auto;
-        padding-top: 0;
-    }
+.cards-container .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--color-cta);
+}
 
-    .bloco-metodo {
-        max-width: 100%;
-        padding-top: 0;
-    }
+.cards-container .card h3 {
+    font-size: 1.2em;
+    color: #755580;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #755580;
+    padding-bottom: 5px;
+    text-align: center;
+}
 
-    .pilar-card {
-        width: 100%;
-    }
+.cards-container .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .grade-pilares {
-        grid-template-columns: 1fr;
-    }
+.cards-container .card li {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
 
-    /* ============================ */
-    /* SERVIÇOS                     */
-    /* ============================ */
 
-    #servicos {
-        padding: 60px 20px;
-    }
-    
-    #servicos h2 {
-        font-size: 2em;
-    }
-
-    .container-servicos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cartao-servico {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* ============================ */
-    /* PLANOS DE ACOMPANHAMENTO     */
-    /* ============================ */
-
-    #como-funciona-acomp {
-        padding: 60px 20px;
-    }
-    
-    #como-funciona-acomp h2 {
-        font-size: 2em;
-    }
-
-    .grade-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cartao-info {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .container-itens-checks {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .planos-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .plano-card {
-        width: 100%;
-    }
-
-    .plano-card.popular::before,
-    .plano-card.custo::before {
-        left: 50%;
-        font-size: 0.7em;
-        top: -10px;
-    }
-    
-    /* ============================ */
-    /* DESCOMPLICA EXPRESS          */
-    /* ============================ */
-
-    #como-funciona {
-        margin-top: 50px;
-        padding: 60px 20px;
-    }
-    
-    #como-funciona > h2 {
-        font-size: 2em;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .cards-container .card {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* ============================ */
-    /* AVALIAÇÕES                   */
-    /* ============================ */
-
-    .tituloAvaliacoes > h1 {
-        font-size: 2em;
+/*avaliações*/
+.tituloAvaliacoes > h1 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        text-align: center;
+        color: var(--color-text-light);
     }
 
     #avaliacoes {
-        padding: 20px;
+        padding: 20px 10px;
+    }
+
+    .avaliacoes-container {
+        /* Permite que os cards se quebrem em várias linhas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .avaliacao-group {
+        /* Mantém a lógica de transição e empilhamento */
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        /* Ajusta o layout para 2x2 */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de largura igual */
+        grid-template-rows: repeat(2, auto); /* Duas linhas de altura automática */
+        gap: 15px; /* Espaço menor entre os cards */
+        
+        transition: opacity 0.5s ease, visibility 0.5s ease;
     }
 
     .avaliacao-group.active {
-        flex-direction: column;
-        align-items: center;
+        opacity: 1;
+        visibility: visible;
+        position: static;
     }
-
+    
     .avaliacao-card {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* ============================ */
-    /* RODAPÉ                       */
-    /* ============================ */
-
-    #rodape {
-        height: auto;
-        padding: 40px 20px;
+        width: 100%; /* Ocupa 100% da coluna do grid */
+        height: auto; /* A altura se ajusta ao conteúdo */
+        padding: 15px; /* Diminui o preenchimento interno */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-left: 3px solid var(--color-primary);
     }
     
-    .container-rodape {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .coluna-info {
-        text-align: center;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .coluna-info.info-principal {
-        order: -1;
-    }
-    
-    .logo-rodape {
-        display: none;
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .texto-logo p {
-        text-align: center;
+    .avaliacao-card h4 {
         font-size: 1em;
-        width: auto;
+        text-align: center;
+        margin-bottom: 5px;
     }
-    
-    .coluna-info.navegacao,
-    .coluna-info.atendimento,
-    .coluna-info.redes-sociais,
-    .coluna-info.como-chegar {
-        margin-right: 0;
+
+    .avaliacao-card p {
+        font-size: 0.8em;
+        line-height: 1.4;
+        margin-bottom: 5px;
         text-align: center;
     }
 
-    .coluna-info h4 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    .coluna-info ul {
+    .google-review-link {
         text-align: center;
     }
     
-    .coluna-info ul li {
-        text-align: center;
-    }
-    
-    .link-social {
-        justify-content: center;
-    }
-    
-    .container-botoes {
-        align-items: center;
-    }
-
-    .botao-mapa {
-        width: 180px;
-    }
-
-    /* Botão flutuante */
-    .botao-wpp-flutuante {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .botao-wpp-flutuante img {
-        width: 30px;
-        height: 30px;
+    .google-review-link img {
+        width: 25px;
     }
 }
+
+/*footer*/
+
+#rodape {
+    background-color: #2b2b2b; /* Fundo cinza escuro */
+    color: #f0f0f0;
+    padding: 60px 20px;
+    margin: auto;
+    height: 98vh;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+    max-height: 250px;
+    
+
+}
+
+.coluna-info {
+    flex: 1;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: left;
+
+}
+
+.coluna-info.navegacao{
+    margin-right: -80px;
+}
+
+.logo-rodape {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+    margin-right: 10px;
+}
+
+.logo-rodape img {
+    margin-top: 25px;
+    height: 180px; /* Ajuste o tamanho da sua logo aqui */
+}
+
+.texto-logo p {
+    margin: 0;
+    font-size: 1.3em;
+    font-family: var(--text-roboto);
+    color: #f0f0f0;
+    text-align: left;
+    width: 240px;
+}
+
+.coluna-info h4 {
+    font-size: 1.2em;
+    color: #72895E; /* Verde escuro do PDF */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: var(--text-roboto);
+    text-align: left;
+}
+
+
+.coluna-info ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.coluna-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.coluna-info.atendimento > a{
+    text-align: left;
+    margin-left: 10px;
+}
+.coluna-info.atendimento > p{
+   margin-bottom: 15px;
+    text-align: left;
+
+
+}
+
+
+.coluna-info a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.coluna-info a:hover {
+    color: #72895E;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.container-botoes > a{
+    margin-left: -10px;
+}
+
+.botao-mapa {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #555;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.botao-mapa img {
+    height: 20px;
+    padding-left: 5px;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.link-social img {
+    height: 20px;
+}
+
+.coluna-info.redes-sociais > a{
+    margin-left: 15px;
+    width: 250px;
+    font-size: 13px;
+}
+
+
+/*bnt wpp flutuante*/
+
+.botao-wpp-flutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 140px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100; /* Garante que o botão fique acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-wpp-flutuante img {
+    width: 35px;
+    height: 35px;
+}
+
