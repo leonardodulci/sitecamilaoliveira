@@ -49,7 +49,7 @@ body {
     left: 0;
     z-index: 1000;
     transition: all 0.4s ease;
-    width: 101vw;
+    width: 99%;
 }
    .main-header {
         /* Torna o header mais compacto para mobile */
@@ -57,14 +57,9 @@ body {
         text-align: center;
     }
 
-    .logo-link {
-        width: 100%; /* Garante que a logo ocupe a linha inteira */
-        margin-bottom: 10px;
-    }
 
 .main-header.scrolled {
-    width: 100vw;
-    height: 40px;
+    height: 65px;
     background-color: rgba(255, 255, 255);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     
@@ -76,7 +71,7 @@ body {
 }
 
 .logo-image-large {
-    height: 90px;
+    height: 75px;
     transition: all 0.4s ease;
 
 }
@@ -93,7 +88,9 @@ body {
 
 .main-header.scrolled .logo-image-small {
     display: block;
-    5px;
+    margin-top: 10px;
+    height: 30px;
+    
 }
 
 .main-header.scrolled  li{
@@ -155,7 +152,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color-background);
-    gap: 40px;
+    gap: 10px;
 }
 
 .Section02 h1,  .Section02 p {
@@ -164,16 +161,16 @@ body {
 }
 
  .Section02 > h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color: var(--color-heading);
-    line-height: 60px;
+    line-height: 53px;
     letter-spacing: 1.0px;
     margin-top: 100px;
 }
 
 main >.Section02 > p {
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: var(--color-text-light);
 }
 
@@ -345,7 +342,7 @@ button[type="submit"]:hover {
 }
 
 .imagem-central {
-    width: 385px; /* Ajuste o tamanho da imagem conforme desejar */
+    width: 335px; /* Ajuste o tamanho da imagem conforme desejar */
     height: 790px;
     object-fit: cover;
     border: 2px solid #72895E; /* Borda verde ao redor da foto */
@@ -378,7 +375,7 @@ button[type="submit"]:hover {
 .grade-pilares {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
 }
 
 .pilar-card {
@@ -389,11 +386,11 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     box-shadow: 1px 1px 5px black;
-    width: 180px;
+    width: 145px;
 }
 
 .pilar-card h4 {
-    font-size: 1.0em;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -494,9 +491,8 @@ button[type="submit"]:hover {
 }
 
 #como-funciona-acomp p {
-    font-size: 1.1em;
+    font-size: 0.8em;
     color: #555;
-    max-width: 800px;
     margin: 15px auto 0px auto;
     line-height: 1.6;
     
@@ -589,11 +585,11 @@ button[type="submit"]:hover {
 }
 
  #planos h2, #avaliacoes h2 {
-    font-size: 2.0em;
+    font-size: 1.5em;
     font-family: var(--text-roboto);
     color: var(--color-text-light);
     margin-bottom: 50px;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -768,7 +764,7 @@ button[type="submit"]:hover {
 }
 
 #como-funciona > h2 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-family: var(--text-roboto);
     font-weight: bold;
     color: var(--color-text-light);
@@ -782,7 +778,6 @@ button[type="submit"]:hover {
     font-size: 1.2em;
     color: #666;
     margin-bottom: 10px;
-    max-width: 800px;
     margin: 0 auto 10px auto;
     
 }
@@ -904,7 +899,7 @@ button[type="submit"]:hover {
     .google-review-link img {
         width: 25px;
     }
-}
+
 
 /*footer*/
 
@@ -955,11 +950,11 @@ button[type="submit"]:hover {
 
 .texto-logo p {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1em;
     font-family: var(--text-roboto);
     color: #f0f0f0;
     text-align: left;
-    width: 240px;
+    width: 185px;
 }
 
 .coluna-info h4 {
@@ -995,7 +990,6 @@ button[type="submit"]:hover {
 
 
 }
-
 
 .coluna-info a {
     color: #f0f0f0;
@@ -1057,10 +1051,10 @@ button[type="submit"]:hover {
 
 .botao-wpp-flutuante {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 140px;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 20px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50px;
@@ -1078,3 +1072,4 @@ button[type="submit"]:hover {
     height: 35px;
 }
 
+}
