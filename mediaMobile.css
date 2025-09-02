@@ -152,7 +152,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color-background);
-    gap: 10px;
+    
 }
 
 .Section02 h1,  .Section02 p {
@@ -191,11 +191,12 @@ main >.Section02 > p {
 
 /* Imagem da nutricionista */
 #Section01 > img {
-    max-width: 35%;
-    height: 650px;
+    max-width: 45%;
+    height:850px;
     object-fit: cover;
     border-radius: 8px;
-    margin-top:175px;
+    margin-top: -45px;
+    
 }
 
 /* ==================== */
@@ -908,16 +909,17 @@ button[type="submit"]:hover {
     color: #f0f0f0;
     padding: 60px 20px;
     margin: auto;
-    height: 90vh;
+    height: 800px;
 }
 
 .container-rodape {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 1400px;
     margin: auto;
     max-height: 250px;
+    flex-direction: column;
     
 
 }
@@ -928,10 +930,6 @@ button[type="submit"]:hover {
     font-size: 13px;
     text-align: left;
 
-}
-
-.coluna-info.navegacao{
-    margin-right: -80px;
 }
 
 .logo-rodape {
