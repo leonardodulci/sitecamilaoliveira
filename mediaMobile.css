@@ -195,7 +195,8 @@ main >.Section02 > p {
     height:850px;
     object-fit: cover;
     border-radius: 8px;
-    margin-top: -45px;
+    margin-top: -80px;
+    margin-left: 10px;
     
 }
 
@@ -846,6 +847,9 @@ button[type="submit"]:hover {
         align-items: center;
         width: 100%;
         margin: 10px auto;
+        position: relative;
+        height: 950px;
+        
     }
 
     .avaliacao-group {
@@ -853,8 +857,6 @@ button[type="submit"]:hover {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         
         /* Ajusta o layout para 2x2 */
@@ -869,7 +871,6 @@ button[type="submit"]:hover {
     .avaliacao-group.active {
         opacity: 1;
         visibility: visible;
-        position: static;
     }
     
     .avaliacao-card {
