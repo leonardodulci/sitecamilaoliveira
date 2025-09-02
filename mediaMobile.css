@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (min-width:200px) and (max-width:500px){
+@media screen and (min-width:200px) and (max-width:757px){
     
 /* ==================== */
 /* ESTILOS GLOBAIS      */
@@ -908,7 +908,7 @@ button[type="submit"]:hover {
     color: #f0f0f0;
     padding: 60px 20px;
     margin: auto;
-    height: 98vh;
+    height: 45vh;
 }
 
 .container-rodape {
