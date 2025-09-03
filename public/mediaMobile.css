@@ -850,7 +850,7 @@ button[type="submit"]:hover {
         width: 100%;
         margin: 10px auto;
         position: relative;
-        height: 950px;
+        height: 1150px;
         
     }
 
@@ -898,6 +898,7 @@ button[type="submit"]:hover {
 
     .google-review-link {
         text-align: center;
+        align-items: end;
     }
     
     .google-review-link img {
