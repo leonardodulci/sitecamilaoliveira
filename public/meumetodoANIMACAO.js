@@ -1,15 +1,6 @@
-const header = document.querySelector('.main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) { // Quando o usuário rolar 50px para baixo
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
     /*animação  acompanhamento nutricional*/
  // Seleciona todos os elementos com a classe 'cartao-info'
-  const elementosParaAnimar = document.querySelectorAll('.cartao-info');
+  const elementosParaAnimar = document.querySelectorAll('.pilar-card');
 
   // Adiciona a classe 'oculto' a todos os elementos para que eles comecem invisíveis
   elementosParaAnimar.forEach(elemento => {

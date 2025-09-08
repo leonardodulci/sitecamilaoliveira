@@ -17,6 +17,7 @@ body {
     background-color: #f8f8f8;
 }
 
+
 :root {
     --color-primary: #586E26; /* Verde da marca */
     --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
@@ -147,92 +148,35 @@ body {
 /* ============================ */
 /* SEÇÃO DE DESTAQUE     */
 /* ============================ */
-
-#Section01 {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-background);
-    
+.imgSection{
+   display: flex;
+   width: 100vw;
+   margin-top: 60px;
 }
-
-.Section02 h1,  .Section02 p {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
- .Section02 > h1 {
-    font-size: 2.3em;
-    font-weight: bold;
-    color: var(--color-heading);
-    line-height: 53px;
-    letter-spacing: 1.0px;
-    margin-top: 70px;
-}
-
-main >.Section02 > p {
-    font-size: 1.0em;
-    color: var(--color-text-light);
-}
-
-.Section02 {
-    flex: 1;
-    max-width: 50%;
-}
-
-.Section02 > h1, .Section02 > p {
-    text-align: left;
-    font-family: 'Neuton';
-}
-
-
-.Section02 > p {
-    font-size: 1.5em;
-}
-
-/* Imagem da nutricionista */
-#Section01 > img {
-    max-width: 45%;
-    height:850px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: -80px;
-    margin-left: 10px;
-    
-}
-
 /* ==================== */
 /* FORMULÁRIO           */
 /* ==================== */
 
 .q1 {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+   
     
 }
 
 #whatsappForm {
-   
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-top:10px;
-    font-family: 'Neuton';
+    margin-left: 20px;
+    position: relative;
+    top: -50px;
+    left: 10px;
     
     
 }
 
-#whatsappForm > h1 {
-    font-size: 2.5em;
-    
-    font-family: var(--text-roboto);
-    color: var(--color-text-light);
-    width: 150px;
-    
-}
+
 
 label {
     font-weight: bold;
@@ -241,7 +185,7 @@ label {
 }
 
 input[type="text"], textarea {
-    width: 85vw;
+    width: 80%;
     padding: 15px 20px;
     border: 1px solid #ccc;
     border-radius: 50px;
@@ -260,29 +204,31 @@ textarea {
 }
 
 button[type="submit"] {
-    width: 85vw;
-    padding: 15px 20px;
+    width: 30%;
+    padding: 5px;
     border: none;
-    background-color: var(--color-primary);
+    background-color: #755580;
     color: #fff;
     border-radius: 50px;
-    font-size: 1.1em;
+    font-size: 0.6em;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 1px 1px 1px white;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    
 }
 
 button[type="submit"]:hover {
-    background-color: #586e26b6;
+    background-color: #755580a8;
     transform: translateY(-2px);
 }
+
 
 /*Sobre mim e meu metodo*/
 #sobre-mim {
     background-color: #f7f7f7;
-    padding: 80px 20px;
+    padding: 20px;
     text-align: center;
-    margin-top: 100px;
 }
 
 #sobre-mim > h2 { /* O título principal da seção */
@@ -392,6 +338,15 @@ button[type="submit"]:hover {
     box-shadow: 1px 1px 5px black;
     width: 100%;
 }
+.pilar-icone {
+        width: 100px; /* Largura do círculo */
+        height: 100px; /* Altura do círculo (igual à largura) */
+        border-radius: 50%; /* Transforma a imagem em um círculo */
+        object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+        border: 3px solid #755580; /* Borda roxa para a moldura */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin-bottom: 20px; /* Espaço entre a imagem e o título */
+    }
 
 .pilar-card h4 {
     font-size: 13px;

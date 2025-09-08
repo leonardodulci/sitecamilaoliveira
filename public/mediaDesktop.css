@@ -27,6 +27,7 @@ body {
     --text-cormorant: 'Cormorant Garamond';
     --text-neuton: 'Neuton';
     --text-roboto: 'Roboto';
+    
 
 
 }
@@ -132,88 +133,36 @@ body {
 /* SEÇÃO DE DESTAQUE     */
 /* ============================ */
 
-#Section01 {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 50px 50px;
-    background-color: var(--color-background);
-    gap: 40px;
+.imgSection{
+    margin-top: 18px;
+    width: 100%;
+    height: 100vh;
 }
-
-.Section02 h1,  .Section02 p {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
- .Section02 > h1 {
-    font-size: 4em;
-    font-weight: bold;
-    color: var(--color-heading);
-    line-height: 60px;
-    letter-spacing: 1.0px;
-}
-
-main >.Section02 > p {
-    font-size: 1.2em;
-    color: var(--color-text-light);
-}
-
-.Section02 {
-    flex: 1;
-    max-width: 50%;
-}
-
-.Section02 > h1, .Section02 > p {
-    text-align: left;
-    font-family: 'Neuton';
-}
-
-
-.Section02 > p {
-    font-size: 1.5em;
-}
-
-/* Imagem da nutricionista */
-#Section01 > img {
-    max-width: 50%;
-    height: 900px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
 /* ==================== */
 /* FORMULÁRIO           */
 /* ==================== */
 
-.q1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    max-width: 500px;
-    
-}
+
 
 #whatsappForm {
-    width: 85%;
-    width: 500px;
+
+    width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-top:10px;
-    font-family: 'Neuton';
+    margin-left: 20px;
+    position: relative;
+    top: -140px;
+    left: 140px;
     
     
 }
 
 #whatsappForm > h1 {
     font-size: 2.5em;
+    font-family: 'Lora';
     
-    font-family: var(--text-roboto);
     color: var(--color-text-light);
-    width: 700px;
+    width:750px;
 }
 
 label {
@@ -225,7 +174,6 @@ label {
 input[type="text"], textarea {
     width: 80%;
     padding: 15px 20px;
-    border: 1px solid #ccc;
     border-radius: 50px;
     font-size: 1em;
     outline: none;
@@ -242,20 +190,22 @@ textarea {
 }
 
 button[type="submit"] {
-    width: 80%;
+    width: 90%;
     padding: 15px 20px;
     border: none;
-    background-color: var(--color-primary);
+    background-color: #755580;
     color: #fff;
     border-radius: 50px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 1px 1px 1px white;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    
 }
 
 button[type="submit"]:hover {
-    background-color: #586e26b6;
+    background-color: #755580a8;
     transform: translateY(-2px);
 }
 
@@ -264,7 +214,6 @@ button[type="submit"]:hover {
     background-color: #f7f7f7;
     padding: 80px 20px;
     text-align: center;
-    margin-top: 100px;
 }
 
 #sobre-mim > h2 { /* O título principal da seção */
@@ -331,7 +280,7 @@ button[type="submit"]:hover {
     width: 600px; /* Ajuste o tamanho da imagem conforme desejar */
     height: 790px;
     object-fit: cover;
-    border: 2px solid #72895E; /* Borda verde ao redor da foto */
+   
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -339,29 +288,39 @@ button[type="submit"]:hover {
 .bloco-metodo {
     flex: 1;
     min-width: 300px;
-    max-width: 600px; /* Ajuste a largura conforme necessário */
     text-align: center;
     padding-top: 50px; /* Para alinhar com a imagem central */
+    height: 700px;
+}
+.oculto {
+  opacity: 0;
+  transform: translateY(20px); /* Move os elementos 20px para baixo */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave de 1 segundo */
 }
 
+.surgir {
+  opacity: 1;
+  transform: translateY(0); /* Retorna os elementos para a posição original */
+}
 .cabecalho-metodo h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #72895E; /* Verde escuro do PDF */
     font-family: var(--text-roboto);
-    margin-bottom: 10px;
+    margin-bottom: 60px;
 }
 
 .cabecalho-metodo p {
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom:30px;
 }
 
 .grade-pilares {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    height: 400px;
 }
 
 .pilar-card {
@@ -372,9 +331,16 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     box-shadow: 1px 1px 5px black;
-    width: 250pxpx;
 }
-
+.pilar-icone {
+        width: 100px; /* Largura do círculo */
+        height: 100px; /* Altura do círculo (igual à largura) */
+        border-radius: 50%; /* Transforma a imagem em um círculo */
+        object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+        border: 3px solid #755580; /* Borda roxa para a moldura */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin-bottom: 20px; /* Espaço entre a imagem e o título */
+    }
 .pilar-card h4 {
     font-size: 1.1em;
     font-weight: bold;
@@ -388,7 +354,8 @@ button[type="submit"]:hover {
 }
 
 .pilar-card p {
-    font-size: 0.9em;
+    margin-top: 20px;
+    font-size: 1.5em;
     line-height: 1.4;
     color: #f0f0f0;
   
@@ -398,7 +365,7 @@ button[type="submit"]:hover {
 /*Serviços*/
 
 #servicos {
-    background-color: #8d676775;
+    background-color: #72895E;
     padding: 80px 20px;
     text-align: center;
     padding: 100px;
@@ -466,7 +433,7 @@ button[type="submit"]:hover {
 /*plano acompanhamento nutricional*/
 
 #como-funciona-acomp {
-    background-color: #f7f7f7;
+    background-color: #72895E;
     padding: 80px 50px;
     text-align: center;
 }
@@ -504,13 +471,24 @@ button[type="submit"]:hover {
     color: var(--color-text-light);
     padding: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 435px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     text-align: left;
     border: 2px solid #755580;
 
+}
+
+.oculto {
+  opacity: 0;
+  transform: translateY(20px); /* Move os elementos 20px para baixo */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave de 1 segundo */
+}
+
+.surgir {
+  opacity: 1;
+  transform: translateY(0); /* Retorna os elementos para a posição original */
 }
 
 .cartao-info h3 {
@@ -566,17 +544,19 @@ button[type="submit"]:hover {
 
 
 
- #planos, #avaliacoes {
+ #avaliacoes {
     background-color: var(--color-background);
-    padding: 80px 50px;
+    padding: 80px ;
     text-align: center;
+
 }
 
  #planos h2, #avaliacoes h2 {
     font-size: 2.5em;
     font-family: var(--text-roboto);
-    color: var(--color-text-light);
+    color:  #755580;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 
@@ -597,6 +577,8 @@ button[type="submit"]:hover {
     text-align: left;
     max-width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid var(--color-primary);
+
 }
 
 .plano-card:hover {
@@ -607,6 +589,7 @@ button[type="submit"]:hover {
 .plano-card.popular {
     border: 2px solid var(--color-primary);
     position: relative;
+    background-color: #72895e9c;
 }
 
 .plano-card.popular::before {
@@ -745,16 +728,17 @@ button[type="submit"]:hover {
 
 #como-funciona {
     margin-top: 105px;
-    background-color:#8d676775;
+    background-color:#72895eb2;
     padding: 80px 50px;
     text-align: center;
+    width: 100%;
 }
 
 #como-funciona > h2 {
     font-size: 2.5em;
     font-family: var(--text-roboto);
     font-weight: bold;
-    color: var(--color-text-light);
+    color: #755580;
     margin-bottom: 20px;
     margin-top: 30px;
     text-align: center;
@@ -763,7 +747,7 @@ button[type="submit"]:hover {
 
 #como-funciona  p {
     font-size: 1.2em;
-    color: #666;
+    color: #755580;
     margin-bottom: 10px;
     max-width: 800px;
     margin: 0 auto 10px auto;
@@ -815,7 +799,7 @@ button[type="submit"]:hover {
 
 /*avaliações*/
 .tituloAvaliacoes > h1{
-    margin-top: 30px;
+    margin-top: 100px;
     margin-bottom: -10px;
     text-align: center;
     font-family: var(--text02);
@@ -833,6 +817,7 @@ button[type="submit"]:hover {
     background-color: var(--color-background);
     padding: 40px 50px;
     text-align: left;
+    
 
 }
 
