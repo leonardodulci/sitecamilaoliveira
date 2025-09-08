@@ -214,6 +214,7 @@ button[type="submit"]:hover {
     background-color: #f7f7f7;
     padding: 80px 20px;
     text-align: center;
+    height: 98vh;
 }
 
 #sobre-mim > h2 { /* O título principal da seção */
@@ -436,16 +437,24 @@ button[type="submit"]:hover {
     background-color: #72895E;
     padding: 80px 50px;
     text-align: center;
+    align-items: center;
+    height: 100vh;
+   
+    
 }
 
 #como-funciona-acomp h2 {
-    font-size: 2.5em;
-    color: #72895E;
-    margin-bottom: 20px;
+    font-size: 3em;
+    color: #755580;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+     margin-top:80px;
+
 }
 
 #como-funciona-acomp p {
-    font-size: 1.1em;
+    font-size: 1.5em;
     color: #555;
     max-width: 800px;
     margin: 15px auto 0px auto;
@@ -797,10 +806,96 @@ button[type="submit"]:hover {
 }
 
 
+/* Estilos da seção principal */
+.chamada-para-acao {
+    height: 100vh;
+  background-color: #755580;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Estilos do contêiner de conteúdo */
+.chamada-para-acao__conteudo {
+  max-width: 1000px;
+}
+
+/* Estilo para o texto superior */
+.chamada-para-acao__texto-superior {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+/* Estilos do título principal */
+.chamada-para-acao__titulo {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+/* Estilos do subtítulo */
+.chamada-para-acao__subtitulo {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  opacity: 0.9;
+color: #fff;
+
+}
+
+/* Estilos do botão */
+.chamada-para-acao__botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background-color: #d7ff43;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chamada-para-acao__botao:hover {
+  transform: translateY(-3px);
+  background-color: #bdfd00;
+}
+
+/* Estilos do ícone SVG dentro do botão */
+.chamada-para-acao__icone {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .chamada-para-acao__titulo {
+    font-size: 32px;
+  }
+}
+
+
 /*avaliações*/
+
+.tituloAvaliacoes{
+    height: 90vh;
+    margin-top: 25px;
+}
 .tituloAvaliacoes > h1{
     margin-top: 100px;
-    margin-bottom: -10px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: var(--text02);
     font-size: 2.5em;
