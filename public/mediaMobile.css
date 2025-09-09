@@ -215,6 +215,7 @@ button[type="submit"] {
     cursor: pointer;
     box-shadow: 1px 1px 1px white;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
     
 }
 
