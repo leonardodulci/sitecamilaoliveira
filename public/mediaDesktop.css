@@ -433,71 +433,92 @@ button[type="submit"]:hover {
 
 /*plano acompanhamento nutricional*/
 
+/*plano acompanhamento nutricional*/
+#como-funciona-acomp > .conteudo-cabecalho > p{
+    font-family: var(--text-roboto);
+    color: #fff;
+}
+
+
 #como-funciona-acomp {
     background-color: #72895E;
     padding: 80px 50px;
     text-align: center;
-    align-items: center;
-    height: 100vh;
-   
-    
+    /* Remover height: 100vh; para que a seção se adapte ao conteúdo */
 }
 
 #como-funciona-acomp h2 {
     font-size: 3em;
     color: #755580;
     margin-bottom: 50px;
-    text-align: center;
-    align-items: center;
-     margin-top:80px;
-
 }
 
-#como-funciona-acomp p {
-    font-size: 1.5em;
-    color: #555;
-    max-width: 800px;
-    margin: 15px auto 0px auto;
-    line-height: 1.6;
-    
-}
+/* Removi o estilo de #como-funciona-acomp p para que o estilo da nova classe de texto não seja sobrescrito */
 
-#como-funciona-acomp p strong {
-    font-weight: bold;
-}
-
-.grade-cards {
+/* Novo contêiner para o layout flexível */
+.conteudo-flex {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 50px;
+    flex-wrap: wrap; /* Permite quebras de linha em telas pequenas */
+    align-items: flex-start; /* Alinha o texto e os cartões no topo */
+}
+
+/* Novo estilo para a caixa de texto */
+.texto-explicacao {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo com transparência */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #755580; /* Borda correspondente aos cartões */
+    flex-basis: 40%; /* Largura de base, pode ser ajustado */
+    text-align: left;
+    color: #f0f0f0;
+}
+
+.texto-explicacao p {
+    font-size: 1.7em;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
+.texto-explicacao strong {
+    color: #755580; /* Destaque em outra cor para as palavras-chave */
+    font-weight: bold;
+}
+
+/* Estilos existentes para os cartões */
+.grade-cards {
+    display: flex;
+    flex-direction: column; /* Organiza os cartões verticalmente */
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 .cartao-info {
-    margin-top: 50px;
+    margin-top: 0; /* Removido o margin-top para alinhar com o texto */
     background-color: #ffffff;
-    color: var(--color-text-light);
+    color: #555;
     padding: 30px;
     border-radius: 10px;
-    width: 435px;
+    width: 435px; /* Manter a largura */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     text-align: left;
     border: 2px solid #755580;
-
 }
 
 .oculto {
-  opacity: 0;
-  transform: translateY(20px); /* Move os elementos 20px para baixo */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave de 1 segundo */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .surgir {
-  opacity: 1;
-  transform: translateY(0); /* Retorna os elementos para a posição original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .cartao-info h3 {
@@ -520,34 +541,75 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
     font-size: 0.9em;
     line-height: 1.4;
-}
-
-.container-itens-checks {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.item-check {
-    display: flex;
+    display: flex; /* Adiciona flexbox para o ícone de check */
     align-items: center;
-    gap: 10px;
 }
 
-.item-check .icone-check-grande {
+.cartao-info li .check-icon {
+    margin-right: 10px;
     color: #755580;
-    font-size: 2em;
     font-weight: bold;
 }
 
-.item-check p {
-    margin: 0;
-    font-size: 1.1em;
-    color: #555;
+/* Espaçamento central já definido no .conteudo-flex */
+.conteudo-flex {
+    /* ... seu código existente ... */
+    gap: 60px; /* Aumentar o gap para um espaço maior */
+    position: relative; /* Necessário para posicionar as linhas com base no contêiner */
 }
 
+.texto-explicacao {
+    /* ... seu código existente ... */
+    position: relative; /* Necessário para o posicionamento da linha central */
+    left: -250px;
+    height: 745px;
+    font-size: 1.1em;
+}
+
+/* Novo código para as linhas */
+.grade-cards {
+    /* ... seu código existente ... */
+    position: relative;
+}
+
+/* Linha central que conecta os cards ao texto */
+.grade-cards::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: -311px; /* Ajuste a distância do texto */
+    width: 313px;
+    height: 5px;
+    background-color: #a396a6;
+    transform: translateY(-50%);
+}
+
+/* Linha superior que se conecta ao primeiro card */
+.grade-cards .cartao-info:first-child::before {
+    content: '';
+    position: absolute;
+    top:150px;
+   left: -313px; /* Ajuste a distância do texto */
+    width: 313px;
+    height: 5px; /* A altura da linha vertical */
+    background-color: #a396a6;
+    transform: translateY(-50%);
+}
+
+/* Linha inferior que se conecta ao último card */
+.grade-cards .cartao-info:last-child::before {
+    content: '';
+    position: absolute;
+    bottom: 124;
+    left: -313px; /* Ajuste a distância do texto */
+    width: 313px;
+    height: 5px;
+    background-color: #a396a6;
+    transform: translateY(50%);
+}
+
+
+/* Para a linha reta entre os cards, você pode usar uma borda ou outro pseudo-elemento */
 
 /*Planos de serviço  */
 
@@ -858,7 +920,7 @@ color: #fff;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 32px;
+  padding: 20px 75px;
   background-color: #d7ff43;
   color: #000;
   font-size: 16px;
@@ -879,12 +941,7 @@ color: #fff;
   height: 20px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .chamada-para-acao__titulo {
-    font-size: 32px;
-  }
-}
+
 
 
 /*avaliações*/
@@ -998,10 +1055,88 @@ color: #fff;
     transform: scale(1.1);
 }
 
+/*img final*/
+
+.imgfinal > .acomp-instagram{
+
+    padding: 30px;
+    text-align: center;
+    font-family: var(--text-roboto);
+    font-weight: bolder;
+
+}
+
+.imgfinal > .acomp-instagram > p{
+    color: #72895E;
+    text-align: center;
+}
+
+.imgfinal > .acomp-instagram > p > a{
+    margin-left: 15px;
+    color: #755580;
+    letter-spacing: 3px;
+}
+
+ 
+.imgfinal > .acomp-instagram > p > a > .material-symbols-outlined{
+position: relative;
+top:5px;
+
+}
+
+
+.box-agendar-consulta {
+    height: 150px;
+    background-color: #774372; /* Cor de fundo da imagem */
+    padding: 0 50px; /* Adiciona espaçamento nas laterais */
+    
+    /* Configurações Flexbox */
+    display: flex;
+    justify-content: space-between; /* Distribui o texto e o botão para as extremidades */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.texto-agendar p {
+    font-family: Arial, sans-serif;
+    color: #fff; /* Cor do texto */
+    line-height: 1.4;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.botao-agendar a {
+    background-color: #72895E; /* Fundo do botão */
+    color: #ffff; /* Cor do texto do botão */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 30px; /* Aumenta a área clicável e dá o formato do botão */
+    border-radius: 50px; /* Arredonda as bordas do botão */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo para o ícone do WhatsApp */
+.botao-agendar a span::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('imagens/whatsapp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*footer*/
 
 #rodape {
-    background-color: #2b2b2b; /* Fundo cinza escuro */
+    background-color: #72895e; /* Fundo cinza escuro */
     color: #f0f0f0;
     padding: 60px 20px;
     margin: auto;
@@ -1057,7 +1192,7 @@ color: #fff;
 
 .coluna-info h4 {
     font-size: 1.2em;
-    color: #72895E; /* Verde escuro do PDF */
+    color: #fff; /* Verde escuro do PDF */
     margin-bottom: 20px;
     text-transform: uppercase;
     font-family: var(--text-roboto);
@@ -1097,7 +1232,7 @@ color: #fff;
 }
 
 .coluna-info a:hover {
-    color: #72895E;
+    color: black;
 }
 
 .container-botoes {
@@ -1116,7 +1251,7 @@ color: #fff;
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #555;
+    background-color: #755580;
     height: 35px;
     width: 150px;
     border-radius: 5px;
@@ -1136,13 +1271,14 @@ color: #fff;
 }
 
 .link-social img {
-    height: 20px;
+    height: 30px;
+    border-radius:10px ;
 }
 
 .coluna-info.redes-sociais > a{
     margin-left: 15px;
     width: 250px;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 
@@ -1167,8 +1303,8 @@ color: #fff;
 }
 
 .botao-wpp-flutuante img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
 }
 
 }
