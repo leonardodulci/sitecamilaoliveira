@@ -18,6 +18,32 @@ body {
 }
 
 
+body {
+    background-color: #f8f8f8;
+}
+body a, button{
+    font-family: 'Elegante Classica';
+}
+body h1{
+    font-family: 'Elegante Classica';
+
+}
+body h2{
+        font-family: 'Elegante Classica';
+
+}
+
+body h3{
+    font-family: 'Elegante Classica';
+}
+body h4{
+    font-family: 'Elegante Classica';
+}
+
+body p, span{
+    font-family: 'Lora';
+}
+
 :root {
     --color-primary: #586E26; /* Verde da marca */
     --color-secondary: #EBE9E6; /* Cor de fundo suave da seção hero */
@@ -25,13 +51,46 @@ body {
     --color-cta: RGB(117, 85, 128); /* Verde do WhatsApp */
     --color-heading: #584D42; /* Marrom para títulos */
     --color-text-light: #555; /* Cinza para textos */
-    --text-cormorant: 'Cormorant Garamond';
-    --text-neuton: 'Neuton';
-    --text-roboto: 'Roboto';
+ 
 
 
 }
 
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Fonte Elegante Classica */
+@font-face {
+  font-family: 'Elegante Classica';
+  src: url('fonts/Elegante Classica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* ============================ */
@@ -235,7 +294,6 @@ button[type="submit"]:hover {
 #sobre-mim > h2 { /* O título principal da seção */
     font-size: 2.5em;
     color: var(--color-text-light); /* Verde escuro do PDF */
-    font-family: var(--text-roboto);
     margin-bottom: 50px;
 }
 
@@ -312,7 +370,6 @@ button[type="submit"]:hover {
 .cabecalho-metodo h2 {
     font-size: 2.5em;
     color: #72895E; /* Verde escuro do PDF */
-    font-family: var(--text-roboto);
     margin-bottom: 10px;
 }
 
@@ -381,7 +438,6 @@ button[type="submit"]:hover {
 #servicos h2 {
     font-size: 2.5em;
     color: var(--color-text-light);
-    font-family: var(--text-roboto);
     margin-bottom: 50px;
 }
 
@@ -410,7 +466,6 @@ button[type="submit"]:hover {
 .cartao-servico h3 {
     font-size: 1.6em;
     color: #72895E;
-    font-family: var(--text-roboto);
     margin-bottom: 40px;
 }
 
@@ -487,12 +542,10 @@ button[type="submit"]:hover {
 
 .cartao-info h3 {
     font-size: 1.2em;
-    font-family: 'dream', serif;
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 3px solid #a396a6;
     padding-bottom: 10px;
-    font-family: var(--text-roboto);
 }
 
 .cartao-info ul {
@@ -568,7 +621,6 @@ button[type="submit"]:hover {
 
  #planos h2, #avaliacoes h2 {
     font-size: 1.5em;
-    font-family: var(--text-roboto);
     color: var(--color-text-light);
     margin-bottom: 50px;
     text-align: center;
@@ -672,7 +724,6 @@ button[type="submit"]:hover {
 }
 
 .plano-card p{
-    font-family: var(--text-roboto);
     margin-bottom: 20px;
 
 
@@ -747,7 +798,6 @@ button[type="submit"]:hover {
 
 #como-funciona > h2 {
     font-size: 1.8em;
-    font-family: var(--text-roboto);
     font-weight: bold;
     color: var(--color-text-light);
     margin-bottom: 20px;
@@ -810,6 +860,7 @@ button[type="submit"]:hover {
 /* Estilos da seção principal */
 .chamada-para-acao {
     height: 100vh;
+    width: 99.2vw;
   background-color: #755580;
   color: #fff;
   display: flex;
@@ -967,7 +1018,6 @@ color: #fff;
 
     padding: 30px;
     text-align: center;
-    font-family: var(--text-roboto);
     font-weight: bolder;
 
 }
@@ -1004,7 +1054,6 @@ top:5px;
 }
 
 .texto-agendar p {
-    font-family: Arial, sans-serif;
     color: #fff; /* Cor do texto */
     line-height: 1.4;
     font-size: 0.6em;
@@ -1014,7 +1063,6 @@ top:5px;
 .botao-agendar a {
     background-color: #72895E; /* Fundo do botão */
     color: #ffff; /* Cor do texto do botão */
-    font-family: Arial, sans-serif;
     font-weight: bold;
     text-decoration: none;
     padding: 15px 3px; /* Aumenta a área clicável e dá o formato do botão */
@@ -1045,13 +1093,15 @@ top:5px;
 /*footer*/
 
 #rodape {
-    background-color: #2b2b2b; /* Fundo cinza escuro */
+    background-color: #72895e; /* Fundo cinza escuro */
     color: #f0f0f0;
     padding: 60px 20px;
     margin: auto;
     height: 800px;
 }
-
+#rodape h4{
+    color: #755580;
+}
 .container-rodape {
     display: flex;
     justify-content: space-between;
@@ -1088,7 +1138,6 @@ top:5px;
 .texto-logo p {
     margin: 0;
     font-size: 1em;
-    font-family: var(--text-roboto);
     color: #f0f0f0;
     text-align: left;
     width: 185px;
@@ -1099,7 +1148,6 @@ top:5px;
     color: #72895E; /* Verde escuro do PDF */
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: var(--text-roboto);
     text-align: left;
 }
 
@@ -1147,6 +1195,7 @@ top:5px;
 
 .container-botoes > a{
     margin-left: -10px;
+    background-color: #755580;
 }
 
 .botao-mapa {
@@ -1191,7 +1240,7 @@ top:5px;
     width: 50px;
     height: 50px;
     bottom: 40px;
-    right: 70px;
+    right: 20px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50px;

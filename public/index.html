@@ -25,13 +25,13 @@
     <nav class="main-nav">
         <ul>
             <li><a href="#sobre-mim" class="sobre-mimMOBILE">Meu método</a></li>
-            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#como-funciona-acomp">Serviços</a></li>
             <li><a href="#avaliacoes">Avaliações</a></li>
-            <li><a href="#Section01">Contato</a></li>
+            <li><a href="#Contato">Contato</a></li>
             <li><a href="#como-chegar">Localização</a></li>
         </ul>
     </nav>
-    <a href="https://api.whatsapp.com/..." target="_blank" class="whatsapp-button">
+    <a href="https://api.whatsapp.com/..." target="_blank" class="whatsapp-button" id="wppbtn">
         Inicie sua transformação 
     </a>
 </header>
@@ -45,7 +45,7 @@
             <form id="whatsappForm">
                 
                 <br>
-                <button type="submit" target="_blank" rel="noopener">QUERO AGENDAR</button>
+                <button type="submit" target="_blank" rel="noopener"> QUERO AGENDAR</button>
             </form>
           
         
@@ -313,7 +313,7 @@
         <div class="div-img"><img src="imagens/imgfinal.png" alt="img"></div>
 
 
-        <div class="acomp-instagram"><p>ACOMPANHE PELO INSTAGRAM  <a href="https://www.instagram.com/heymila/">@HEYMILA <span class="material-symbols-outlined">arrow_forward</span></a></p></div>
+        <div class="acomp-instagram"><p>ACOMPANHE PELO INSTAGRAM  <a href="https://www.instagram.com/heymila/" target="_blank">@HEYMILA <span class="material-symbols-outlined">arrow_forward</span></a></p></div>
     </section>
 
 
@@ -324,7 +324,7 @@
     </div>
     
     <div class="botao-agendar">
-        <a href="https://wa.me/5561998817667">AGENDAR CONSULTA<span></span></a>
+        <a href="https://wa.me/5561998817667" target="_blank">AGENDAR CONSULTA<span></span></a>
     </div>
 </section>
 
@@ -347,15 +347,14 @@
         <div class="coluna-info navegacao">
             <h4>NAVEGUE</h4>
             <ul>
-                <li><a href="#header">Início</a></li>
+                <li><a href="#sobre-mim">Início</a></li>
                 <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#como-funciona-acomp">Serviços</a></li>
             </ul>
         </div>
 
-        <div class="coluna-info atendimento">
-            <h4>ATENDIMENTO</h4>
+        <div class="coluna-info atendimento" id="Contato">
+            <h4>CONTATO</h4>
             <p><strong>Telefone:</strong> (61) 99881-7667</p>
             <p><strong>E-mail:</strong> camiladeoliveirag@gmail.com</p>
         </div>
@@ -391,7 +390,7 @@
     <script type="module" src="formWpp.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
-
+    <script type="module" src="btnagendar.js"></script>
 
 
 
