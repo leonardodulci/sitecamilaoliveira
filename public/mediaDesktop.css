@@ -929,7 +929,7 @@ button[type="submit"]:hover {
 
 /* Estilo para o texto superior */
 .chamada-para-acao__texto-superior {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
