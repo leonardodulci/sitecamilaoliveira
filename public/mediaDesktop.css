@@ -15,15 +15,17 @@
 body {
     background-color: #f8f8f8;
 }
-
+body a{
+    font-family: 'Elegante Classica';
+}
 body h2{
-    font-family: 'Elegante';
+    font-family: 'Elegante Classica';
 
 }body h3{
-    font-family: 'Elegante';
+    font-family: 'Elegante Classica';
 }
 body h4{
-    font-family: 'Elegante';
+    font-family: 'Elegante Classica';
 }
 
 body p, span{
@@ -346,10 +348,10 @@ button[type="submit"]:hover {
   transform: translateY(0); /* Retorna os elementos para a posição original */
 }
 .cabecalho-metodo h2 {
-    font-size: 3em;
+    font-size: 4.5em;
     color: #72895E; /* Verde escuro do PDF */
     margin-bottom: 60px;
-    font-family: 'Elegante';
+    font-family: 'Elegante Classica';
 }
 
 .cabecalho-metodo p {
@@ -579,7 +581,7 @@ button[type="submit"]:hover {
 
 .cartao-info li {
     margin-bottom: 10px;
-    font-size: 0.9em;
+    font-size: 1.3em;
     line-height: 1.4;
     display: flex; /* Adiciona flexbox para o ícone de check */
     align-items: center;
@@ -602,8 +604,8 @@ button[type="submit"]:hover {
     /* ... seu código existente ... */
     position: relative; /* Necessário para o posicionamento da linha central */
     left: -250px;
-    height: 745px;
-    font-size: 1.1em;
+    height: 875px;
+    font-size: 1.2em;
     background-color: #fff;
     color: #755580;
 }
@@ -910,7 +912,7 @@ button[type="submit"]:hover {
 /* Estilos da seção principal */
 .chamada-para-acao {
     height: 100vh;
-    width: 99vw;
+   width: 99.2vw;
   background-color: #755580;
   color: #fff;
   display: flex;
@@ -927,7 +929,7 @@ button[type="submit"]:hover {
 
 /* Estilo para o texto superior */
 .chamada-para-acao__texto-superior {
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1173,7 +1175,9 @@ top:5px;
 }
 
 
-
+.imgfinal > .div-img > img{
+    width: 99.2vw;
+}
 
 /*footer*/
 
