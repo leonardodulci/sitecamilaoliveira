@@ -437,6 +437,7 @@ button[type="submit"]:hover {
 #como-funciona-acomp > .conteudo-cabecalho > p{
     font-family: var(--text-roboto);
     color: #fff;
+    font-size: 25px;
 }
 
 
@@ -449,8 +450,9 @@ button[type="submit"]:hover {
 
 #como-funciona-acomp h2 {
     font-size: 3em;
-    color: #755580;
+    color: #fff;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 /* Removi o estilo de #como-funciona-acomp p para que o estilo da nova classe de texto não seja sobrescrito */
@@ -564,6 +566,8 @@ button[type="submit"]:hover {
     left: -250px;
     height: 745px;
     font-size: 1.1em;
+    background-color: #fff;
+    color: #755580;
 }
 
 /* Novo código para as linhas */
@@ -888,7 +892,7 @@ button[type="submit"]:hover {
 
 /* Estilo para o texto superior */
 .chamada-para-acao__texto-superior {
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -898,7 +902,7 @@ button[type="submit"]:hover {
 
 /* Estilos do título principal */
 .chamada-para-acao__titulo {
-  font-size: 16px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 50px;
@@ -907,7 +911,7 @@ button[type="submit"]:hover {
 
 /* Estilos do subtítulo */
 .chamada-para-acao__subtitulo {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 40px;
@@ -921,7 +925,7 @@ color: #fff;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 20px 75px;
+  padding: 25px 100px;
   background-color: #d7ff43;
   color: #000;
   font-size: 16px;
