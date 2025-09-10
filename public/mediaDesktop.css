@@ -13,8 +13,21 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
+}
+
+body h2{
+    font-family: 'Elegante';
+
+}body h3{
+    font-family: 'Elegante';
+}
+body h4{
+    font-family: 'Elegante';
+}
+
+body p, span{
+    font-family: 'Lora';
 }
 
 :root {
@@ -24,14 +37,45 @@ body {
     --color-cta: RGB(117, 85, 128); /* Verde do WhatsApp */
     --color-heading: #584D42; /* Marrom para títulos */
     --color-text-light: #555; /* Cinza para textos */
-    --text-cormorant: 'Cormorant Garamond';
-    --text-neuton: 'Neuton';
-    --text-roboto: 'Roboto';
-    
+
 
 
 }
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/Lora-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Fonte Elegante Classica */
+@font-face {
+  font-family: 'Elegante Classica';
+  src: url('fonts/Elegante Classica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* ============================ */
@@ -220,7 +264,6 @@ button[type="submit"]:hover {
 #sobre-mim > h2 { /* O título principal da seção */
     font-size: 2.5em;
     color: var(--color-text-light); /* Verde escuro do PDF */
-    font-family: var(--text-roboto);
     margin-bottom: 50px;
 }
 
@@ -257,7 +300,6 @@ button[type="submit"]:hover {
 .cartao-perfil h3 {
     font-size: 2.5em;
     color: #72895E; /* Verde escuro do PDF */
-    font-family:var(--text-roboto);
     margin-top: 0; /* Remove margem superior desnecessária */
     margin-bottom: 20px;
 }
@@ -306,8 +348,8 @@ button[type="submit"]:hover {
 .cabecalho-metodo h2 {
     font-size: 3em;
     color: #72895E; /* Verde escuro do PDF */
-    font-family: var(--text-roboto);
     margin-bottom: 60px;
+    font-family: 'Elegante';
 }
 
 .cabecalho-metodo p {
@@ -315,6 +357,7 @@ button[type="submit"]:hover {
     color: #555;
     line-height: 1.6;
     margin-bottom:30px;
+    font-family: 'Lora';
 }
 
 .grade-pilares {
@@ -376,7 +419,6 @@ button[type="submit"]:hover {
 #servicos h2 {
     font-size: 2.5em;
     color: var(--color-text-light);
-    font-family: var(--text-roboto);
     margin-bottom: 50px;
 }
 
@@ -405,7 +447,6 @@ button[type="submit"]:hover {
 .cartao-servico h3 {
     font-size: 1.6em;
     color: #72895E;
-    font-family: var(--text-roboto);
     margin-bottom: 15px;
 }
 
@@ -435,7 +476,6 @@ button[type="submit"]:hover {
 
 /*plano acompanhamento nutricional*/
 #como-funciona-acomp > .conteudo-cabecalho > p{
-    font-family: var(--text-roboto);
     color: #fff;
     font-size: 25px;
 }
@@ -525,12 +565,10 @@ button[type="submit"]:hover {
 
 .cartao-info h3 {
     font-size: 1.2em;
-    font-family: 'dream', serif;
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 3px solid #a396a6;
     padding-bottom: 10px;
-    font-family: var(--text-roboto);
 }
 
 .cartao-info ul {
@@ -628,7 +666,6 @@ button[type="submit"]:hover {
 
  #planos h2, #avaliacoes h2 {
     font-size: 2.5em;
-    font-family: var(--text-roboto);
     color:  #755580;
     margin-bottom: 50px;
     text-align: center;
@@ -735,7 +772,6 @@ button[type="submit"]:hover {
 }
 
 .plano-card p{
-    font-family: var(--text-roboto);
     margin-bottom: 20px;
 
 
@@ -811,7 +847,6 @@ button[type="submit"]:hover {
 
 #como-funciona > h2 {
     font-size: 2.5em;
-    font-family: var(--text-roboto);
     font-weight: bold;
     color: #755580;
     margin-bottom: 20px;
@@ -959,7 +994,6 @@ color: #fff;
     margin-top: 100px;
     margin-bottom: 30px;
     text-align: center;
-    font-family: var(--text02);
     font-size: 2.5em;
     color: var(--color-heading);
 }
@@ -1192,7 +1226,6 @@ top:5px;
 .texto-logo p {
     margin: 0;
     font-size: 1.3em;
-    font-family: var(--text-roboto);
     color: #f0f0f0;
     text-align: left;
     width: 240px;
