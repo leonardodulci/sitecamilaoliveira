@@ -15,10 +15,10 @@
 body {
     background-color: #f8f8f8;
 }
-body a{
+body a, button{
     font-family: 'Elegante Classica';
 }
-body h2{
+body h1, h2{
     font-family: 'Elegante Classica';
 
 }body h3{
