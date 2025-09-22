@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+@media screen and (min-width:755px) and (max-width:1400px){
+    /* Evita rolagem lateral */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .main-header {
+    padding: 10px 25px;
+    height: 70px;
+  }
+
+  .logo-image-large {
+    height: 65px;
+  }
+
+  .whatsapp-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .hero .content {
+    flex: 1;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .image {
+    flex: 1;
+    text-align: center;
+  }
+
+  .hero .image img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* FORMULÁRIO */
+  #whatsappForm {
+   
+    max-width: 500px;
+    margin: 0 auto;
+    left:  -326px;
+    top: -100px;
+    position: relative;
+  }
+
+  /* SOBRE MIM */
+  #sobre-mim {
+    padding: 50px 20px;
+    height: 900px;
+  }
+
+  .grade-pilares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pilar-card {
+    flex: 1 1 45%;
+    max-width: 300px;
+  }
+
+  /* COMO FUNCIONA */
+    #como-funciona-acomp {
+        height: 1210px;
+    }
+
+  .conteudo-flex {
+    display: inline-flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    left: 150px;
+
+  }
+
+  .texto-explicacao {
+    font-size: 20px;
+    max-width: 600px;
+  }
+      .texto-explicacao p {
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+  .grade-cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .cartao-info {
+    flex: 1 1 45%;
+    max-width: 350px;
+  }
+
+      .grade-cards .cartao-info:first-child::before {
+        content: '';
+        position: absolute;
+        top: 150px;
+        left: -284px;
+        width: 284px;
+        height: 5px;
+        background-color: #a396a6;
+        transform: translateY(-50%);
+    }
+
+
+    .grade-cards::before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        left: -281px;
+        width: 285px;
+        height: 5px;
+        background-color: #a396a6;
+        transform: translateY(-50%);
+    }
+
+    .grade-cards .cartao-info:last-child::before {
+        content: '';
+        position: absolute;
+        bottom: 124;
+        left: -283px;
+        width: 282px;
+        height: 5px;
+        background-color: #a396a6;
+        transform: translateY(50%);
+    }
+  /* AVALIAÇÕES */
+
+      .tituloAvaliacoes {
+        height: 1150px;
+        margin-top: 25px;
+    }
+
+
+  .avaliacoes-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .avaliacao-card {
+    flex: 1 1 45%;
+    min-width: 320px;
+    max-width: 500px;
+  }
+
+  /*chamada para ação*/
+    .chamada-para-acao {
+        height: 1050px;
+        width: 99.2vw;
+        background-color: #755580;
+        color: #fff;
+        display: flex
+;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+        text-align: center;
+    }
+  /* RODAPÉ */
+  
+#rodape {
+    background-color: #72895e; /* Fundo cinza escuro */
+    color: #f0f0f0;
+    padding: 60px 20px;
+    margin: auto;
+    height: 250px;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+    max-height: 250px;
+    gap: 35px;
+    
+
+}
+
+.coluna-info {
+    flex: 1;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: left;
+
+}
+
+.coluna-info.navegacao{
+    margin-right: -80px;
+}
+
+.logo-rodape {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+    margin-right: 10px;
+}
+
+.logo-rodape img {
+    margin-top: 25px;
+    height: 180px; /* Ajuste o tamanho da sua logo aqui */
+}
+
+.texto-logo p {
+    margin: 0;
+    font-size: 1.3em;
+    color: #f0f0f0;
+    text-align: left;
+    width: 240px;
+}
+
+.coluna-info h4 {
+    font-size: 1.2em;
+    color: #fff; /* Verde escuro do PDF */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: var(--text-roboto);
+    text-align: left;
+}
+
+
+.coluna-info ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.coluna-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.coluna-info.atendimento > a{
+    text-align: left;
+    margin-left: 10px;
+}
+.coluna-info.atendimento > p{
+   margin-bottom: 15px;
+    text-align: left;
+
+
+}
+
+
+.coluna-info a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.coluna-info a:hover {
+    color: black;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.container-botoes > a{
+    margin-left: -10px;
+}
+
+.botao-mapa {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #755580;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.botao-mapa img {
+    height: 20px;
+    padding-left: 5px;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.link-social img {
+    height: 30px;
+    border-radius:10px ;
+}
+
+.coluna-info.redes-sociais > a{
+    margin-left: 15px;
+    width: 250px;
+    font-size: 18px;
+}
+
+}
