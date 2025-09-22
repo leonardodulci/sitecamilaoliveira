@@ -22,24 +22,46 @@
         <img src="imagens/LogoVerdeEstrelacamila-oliveira---8.png" alt="Logo Camila Oliveira" class="logo-image-large">
         <img src="imagens/logoCO.png" alt="Logo Camila Oliveira" class="logo-image-small">
     </a>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#sobre-mim" class="sobre-mimMOBILE">Meu método</a></li>
-            <li><a href="#como-funciona-acomp">Serviços</a></li>
-            <li><a href="#avaliacoes">Avaliações</a></li>
-            <li><a href="#Contato">Contato</a></li>
-            <li><a href="#como-chegar">Localização</a></li>
-        </ul>
-    </nav>
-    <a href="https://api.whatsapp.com/..." target="_blank" class="whatsapp-button" id="wppbtn">
-        Inicie sua transformação 
-    </a>
+   <!-- Botão Hamburguer -->
+ <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#sobre-mim" class="sobre-mimMOBILE">Meu método</a></li>
+      <li><a href="#como-funciona-acomp">Serviços</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#Contato">Contato</a></li>
+      <li><a href="#como-chegar">Localização</a></li>
+    </ul>
+  </nav>
+
+  <a href="https://api.whatsapp.com/..." target="_blank" class="whatsapp-button" id="wppbtn">
+    Inicie sua transformação 
+  </a>
 </header>
 <main>
     <a href="https://wa.me/5561998817667" target="_blank" class="botao-wpp-flutuante">
     <img src="imagens/whatsapp.png" alt="Ícone WhatsApp">
 </a>
 
+  <section class="hero">
+    <div class="content">
+      <small>Vem comigo, musa!</small>
+      <h1>Nutrição que transforma, com foco em você e sua jornada.</h1>
+      <p>Nutricionista referência em saúde feminina, emagrecimento saudável e controle de distúrbios metabólicos.</p><br>
+      <p>Crie uma abordagem individual e personalizada, focada em resultados duradouros e em uma vida mais saudável.</p><br>
+      <div class="call-to-action">Vamos iniciar a sua jornada saudável?</div>
+      <br>
+        <button type="submit" target="_blank" rel="noopener"> QUERO AGENDAR</button>
+
+    </div>
+
+    <div class="image">
+      <img src="imagens/fotoCamilaGradiente.png" alt="">
+    </div>
+  </section>
  <img src="imagens/imgSectionAtualizada.png" alt="" class="imgSection">
        
             <form id="whatsappForm">
@@ -310,6 +332,8 @@
 
 
     <section class="imgfinal">
+        <div class="div-img-mobile"><img src="imagens/imgfinalMOBILE.png" alt="div-img-mobile"></div>
+        <div class="div-texto-mobile"><img src="imagens/imgfinalMOBILE-text.png" alt=""></div>
         <div class="div-img"><img src="imagens/imgfinal.png" alt="img"></div>
 
 
@@ -391,9 +415,10 @@
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
     <script type="module" src="btnagendar.js"></script>
+    <script type="module" src="menu-mobile.js"></script>
 
 
 
 
-  </body>
+</body>
 </html>
