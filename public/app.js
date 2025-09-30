@@ -135,3 +135,5 @@
     // O seu formWpp.js tentava importar Firebase com bare imports (quebraria sem bundler). Vamos ignorar isso aqui. :contentReference[oaicite:8]{index=8}
   });
 })();
+
+

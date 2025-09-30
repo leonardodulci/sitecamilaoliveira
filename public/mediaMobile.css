@@ -207,7 +207,7 @@ body p, span, small, div{
 
 .hero {
         flex-direction: column;
-        padding: 2rem 1.5rem;
+        /*padding: 2rem 1.5rem;*/
         text-align: center;
         margin-top: 45px;
         margin-bottom: 25px;     
@@ -232,6 +232,10 @@ body p, span, small, div{
         max-width: 100%;
         height: auto;
         border-radius: 5px;
+      }
+
+      .hero > div > img{
+       width: 100%;
       }
 /* ==================== */
 /* FORMULÁRIO           */
@@ -268,6 +272,8 @@ button[type="submit"] {
     cursor: pointer;
     box-shadow: 1px 1px 1px white;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    top: -50px;
   
     margin: auto;
 }
@@ -276,7 +282,9 @@ button[type="submit"]:hover {
     background-color: #755580a8;
     transform: translateY(-2px);
 }
-
+.img-mobile-hero{
+    margin-top: -35px;
+}
 
 /*Sobre mim e meu metodo*/
 #sobre-mim {
